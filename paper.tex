@@ -1,0 +1,146 @@
+\documentclass[slidetop,lecno,12pt,fleqn,mathserif]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment}
+\usepackage{mathtools,color}
+\setcounter{secnumdepth}{5}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Def}{Definition}
+\newtheorem{Rem}{Remark}
+\newtheorem{Exe}{Exercice}
+\def\beXe{\begin{Exe}} \def\eeXe{\end{Exe}}
+\newtheorem{Thm}{Theorem}
+\def\beT{\begin{Thm}} \def\eeT{\end{Thm}}
+\def\eeD{\end{Def}} \def\beD{\begin{Def}}
+\def\beXa{\begin{Exa}} \def\eeXa{\end{Exa}}
+\def\beR{\begin{Rem}} \def\eeR{\end{Rem}}
+\def\beL{\begin{Lem}} \def\eeL{\end{Lem}}
+\newtheorem{Lem}{Lemma}
+%\newtheorem{As}{Assumption}
+%{\theorembodyfont{\normalfont}
+\newtheorem{Exa}{Example}
+%\newtheorem{ex}{Example}
+\newtheorem{Pro}{Proposition}
+\def\beP{\begin{Pro}} \def\eeP{\end{Pro}}
+\def\beC{\begin{Cor}}
+	\def\eeC{\end{Cor}}
+\def\bc{\begin{cases}
+	} \def\fz{f_C(0)}
+	\def\ec{\end{cases}} \def\Tl{\tilde{\lambda}}
+\def\Fq{\Phi_\q} \def\eqr{\eqref} \def\asy{asymptotically } \def\LTW{Laguerre-Tricomi-Weeks}
+\def\sf{scale function} \def\prob{problem} \def\probs{problems } \def\pro{probability } \def\im{\item}
+   \def\pros{probabilities } \def\ia{infinite activity }
+\def\deF{de Finetti } \def\oedcd{optimal expected discounted cumulative dividends } \def\MAP{Markov additive processes }
+\def\GS{Gerber-Shiu } \def\D{\Delta} \def\fint{finite time} \def\surp{survival probability}
+\def\lev{L\'evy }  \def\mL{{\mathcal L}} \def\T{\tilde} \def\R{\mathbf{R}}
+\def\for{\forall} \def\Lra{\Longrightarrow} \def\divs{dividends} \def\cgf{cumulant generating function} \def\rp{ruin probability } \def\expc{exponential claims} \def\ija{infinite jump activity} \def\pars{parameters }
+\def\ol{\overline }
+\def\bep{\begin{pmatrix}}
+  \def\eep{\end{pmatrix}}
+\def\BEN{\begin{enumerate}}  \def\BI{\begin{itemize}}
+\def\EEN{\end{enumerate}}   \def\EI{\end{itemize}}
+\def\BM{Brownian motion } \def\r{\rho}
+\def\beq{\begin{eqnarray}}\def\eeq{\end{eqnarray}}
+\def\bea{\begin{eqnarray*}}
+\def\eea{\end{eqnarray*}}
+\def\le{\left} \def\ri{\right}
+\def\T{\widetilde}  \def\H{\widehat}
+ \def\WH{Wiener-Hopf }
+\def\I{\infty}  \def\a{\alpha}
+ \def\b{\beta}  \def\val{\vec{\a }}
+\def\g{\gamma}  \def\d{\q} \def\de{\delta}
+\def\z{\zeta}  \def\th{\theta}
+\def\e{\epsilon} \def\k{\kappa} \def\l{\lambda}
+\def\lm{\Pi}
+\def\strf{straightforward}
+ \def\exp{exponential } \def\Ip{In particular, } \def\cP{compound Poisson } \def\LZ{Lokka-Zervos alternative }
+\def\pros{probabilities } \def\fund{fundamental } \def\gen{generalized }
+\def\rvs{random variables } \def\ovl{\overline} \def\upa{\uparrow} \def\gene{generalization } \def\alt{alternatively, } \def\mix{mixed exponential } \def\Lm{L\'evy measure}
+\def\procs{processes} \def\proc{process} \def\capi{capital injections}
+\def\expoc{exponential claims}  \def\expoj{exponential jumps}
+\def\asy{asymptotic } \def\deV{de Vylder } \def\app{approximation}
+   \def\wrb{w^{b[}} \def\hrb{f^{b[}} \newcommand{\prf}{\noindent{\bf Proof:\ }} \def\os{one-sided } \def\tbz{T^{[0}_b} \def\tba{T^{[a}_{b}}
+   \def\mU{{\mathcal U}} \def\ith{it holds that } \def\mD{{\mathcal D}}
+    \def\mZ{{\mathcal \zeta}}  \def\mW{{\mathcal \omega}} \def\mI{{\mathcal I}}
+    \def\wkt{well-known and easy to check that } \def\Pd{Pad\'e approximation } \def\Pds{Pad\'e approximations} \def\mpr{more precisely } \def\ts{two-sided } \def\wk{well-known } \def\pros{probabilities }
+\def\prop{proportionality } \def\ct{constant } \def\cts{constants } \def\para{parameter }
+ \def\sub{subordinator } \def\rps{ruin probabilities }
+ \def\str{strong Markov property} \def\ts{two-sided } \def\wk{well-known} \def\FT{fixed Talbot algorithm } \def\la{\label} \def\rt{ruin theory}
+ \def\lm{\nu}
+\def\sn{spectrally negative }
+\def\sp{spectrally positive }
+\def\LE{Laplace exponent } \def\LT{Laplace transform}
+\def\LTs{Laplace transforms}
+\def\PCL{perturbed \CL } \def\q{q}  \def\c{c}
+\def\Eq{\Leftrightarrow} \def\fp{first passage }
+\def\CL{Cram\'er-Lundberg }
+\def\PK{Pollaczek-Khinchine } \def\How{However, }
+\def\KP{Kolmogorov Pearson } \def\ith{it holds that }
+\def\me{matrix exponential }
+\def\fr{\frac} \def\how{however }
+ \def\sub{subordinator } \def\fe{for example}
+\long\def\symbolfootnote[#1]#2{
+	\begingroup
+	\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}
+	\endgroup}
+\def\fn{\symbolfootnote}\def\mts{moments}
+\def\t{\tau} \def\ta{T_{a,-}}  \def\tb{T_{b,+}} \def\s{\sigma}
+\def\tz{T_{0}} \def\tret{T_{\{0\}}}
+\def\Rui{\Psi} \def\sRui{\ovl{\Rui}} \def\ruik{\psi_\d}
+ \def\bf{\bfseries}  \def\rm{\textrm} \def\it{\itshape}
+\def\mG{\mathcal G} \def\tGe{\tilde{\mG}} \newcommand{\ep}{\mathbf{e}_{\q}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\norm}[1]{|\!|#1|\!|}
+
+\newcommand{\figu}[3]{
+\begin{figure}[!h]
+\begin{center}
+{\includegraphics[width=#3\textwidth]{#1}}
+\end{center}
+\vspace{-0.2cm}
+\caption{\hspace{0.25cm}#2\label{f:#1}}
+\end{figure}
+}
+\newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
+\newcommand{\blue}{\textcolor[rgb]{0.00,0.00,1.00}}
+\newcommand{\green}{\textcolor[rgb]{0.00,0.50,0.50}}
+\author{Rim ADENANE and Florin Avram}
+\title{A \gene of De Vylder's formula and an application}
+\date{\today}
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
+%\logo{}
+%\institute{}
+%
+%\subject{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Abstract}
+In $1978$ \textit{De Vylder} proposed a method of approximating the ultimate ruin probability in the classical  Cramèr-Lundberg risk model, by replacing it via a simpler \proc \ with \expoj.
+In this paper we consider a \gene : we approximate the underlying \proc \ by a \BM perturbed \proc \ with  \expoj. We show numerically that, as expected, the obtained approximation works typically better, and illustrate this with  important applications including the optimization of dividends and the computation of \rps under reinsurance.
+
+%\input{int}
+\input{int0}
+\input{cts}
+\input{deV}
+\input{low1}
+\input{ap}
+\small
+\bibliographystyle{amsalpha}
+\bibliography{Pare36}
+
+
+\end{document}
+

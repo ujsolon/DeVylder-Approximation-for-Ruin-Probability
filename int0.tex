@@ -1,0 +1,172 @@
+
+\section{Introduction}
+
+We recall first  the Cram\'{e}r-Lundberg risk
+model  with an added Brownian perturbation \cite{dufresne1991risk,AA}
+\begin{align} \la{CLp}
+X_t = x + c t + \s B(t) -S_t, S_t=\sum_{i=1}^{N_\lambda (t)} C_i.
+\end{align}
+Here $x \geq 0$ is the initial surplus, $c \geq 0$ is the linear premium rate. The
+ $C_i$'s, $i=1,2,...$ are independent identically distributed (i.i.d)
+random variables with distribution ${F(z)=F_C(z)}$ representing
+nonnegative jumps arriving after independent exponentially distributed
+times with mean $1/\lambda$, and $N_\lambda (t)$ denotes the associated Poisson
+process counting the arrivals of claims on the interval $[0,t]$. Finally, $\s B(t),  \s >0$
+is an independent Brownian perturbation. Ruin happens when, for the first
+ time, a jump takes $X_t$ below 0.
+ 
+ {\bf First passage theory}  concerns the first passage times above and below, and the hitting  time of a level $b$. For any process $X_t, t \geq 0$, these are defined by
+\begin{equation}\la{fpt}
+\begin{aligned}
+\tb &= \tb^{X}=\inf\{t\geq 0: X_t> b\},\\
+\ta&=\ta^X=\inf\{t\geq 0: X_t< a\},\\
+T_{\{b\}}&=T_{\{b\}}^X =\inf\{t\geq 0: X_t=b\},
+\end{aligned}
+\end{equation}
+with $\inf\emptyset=+\infty$. The upper script $X$ will be typically  omitted, as well as the signs $+,-$, when they are clear from the context.
+
+
+Risk theory revolved initially around evaluating and minimizing the
+probability of ruin.  Insurance companies are also interested in maximizing
+company value.  This lead to the study of optimal dividend policies.  As
+suggested by De Finetti in the 1950's \cite{deF} -- see
+also \cite{miller1961dividend} -- an interesting objective is that of
+maximizing the expected value of the sum of discounted future dividend
+payments until the time of ruin.
+
+%\sec{De Finetti optimization of dividends  \la{s:div}}
+
+The most important class of dividend policies is that of a constant barrier
+at $b$, which modifies the surplus only when $X_t>b$, by a lump payment
+bringing the surplus at $b$, and then keep it there by Skorokhod
+reflection, until the next negative jump.  In financial terms, in the
+absence of a Brownian component, this amounts to paying out all the income
+while at $b$.  In case of Brownian perturbation, Skorokhod reflection means
+keeping the process above the barrier by minimal capital injections
+(whenever necessary), or below a barrier, by taking out dividends (if
+necessary) \cite{sk62}.
+
+In presence of the barrier at $b$, the de Finetti objective (the expected
+value of the sum of discounted future dividend payments until ruin) has a
+simple expression \cite{APP} in terms of the so called ``scale function''
+$W$ introduced by \cite{Suprun,Ber}:
+\begin{equation}
+V^{b]}(x)=E^{b]}_x\le[\int_{[0,T_0^{b]}]}e^{-\q
+   t}d \D_t^b \ri]= \bc \frac{W_\q( x)}{W_{\q}^ {\prime}(b)}, & x \leq
+   b\\x-b + \frac{W_\q( b)}{W_{\q}^ {\prime}(b)}, & x>b\ec, \la{div}
+\end{equation}
+where $T_0^{b]}$ is the time of ruin, $q$ denotes the discount rate,
+%$\D_t^b:=\le(\sup_{0 \leq s\leq t} X_{s}-b\ri)_+$
+$\D_t^b$
+the total local time at
+$b$ before time $t$, and $E^{b]}$ the law of the process reflected from
+above at $b$ and absorbed at $0$ and below.
+
+\begin{comment}
+\fn[4]{Formula \eqr{WLT}
+reflects the representation $$V^{b]}(x)=E[ e^{-q \tb} ; \tb
+< \tz] Eazb_b\le[\int_{[0,T_0^{b]}]}e^{-\q t}d \D_t\ri]=E[ e^{-q \tb}
+; \tb < \tz]\; Eazb_b\le[ \D_{T_0^{b]} \wedge \kil_q}\ri],$$ and the fact
+that the local time $\D_t$ at $b$ with reflection at $b$ is an
+exponential \rv.}
+\end{comment}
+
+The scale function 
+$W_{\q}(x):\R \to [0, \infty), \q \geq 0$ is defined on the positive
+half-line by the Laplace transform
+\be \label{WLT}
+\H W_\q (s):=\int_0^\infty  \mathrm{e}^{-s x}  W_{\q}(x) d x = \frac {1} {\k(s)-\q} , \quad \for s > \Fq,
+ \ee
+where the ``symbol" $\k(s)$ (also called \cgf) is defined in \eqr{kf} in
+Section~\ref{s:RT} where we provide the necessary background information,
+and $\Fq$ is the unique nonnegative root of the \CL equation
+\be \Fq:= \sup \{ s \geq 0: \k(s)
+- \q= 0\}, \quad \q \geq 0. \label{Fq} \ee
+
+The scale function $ W_{\q}(x)$ is continuous and increasing on
+$[0,\I)$ \cite{Bingham}, \cite[Thm.~VII.8]{Ber}, \cite[Thm.~8.1]{Kyp}. It
+may have \how many inflection points (such an example is depicted in
+Figure \ref{f:pd}), and these play an important role in the optimization
+of \divs \ \cite{APP,Schmidli,APP15}.  For convenience, $ W_{\q}(x)$ is
+extended to be $0$ on $\R_-$. An important fact that will be exploited is
+that the \LT \ of our function has a unique non-negative pole $\Fq$,
+see \eqr{WLT} and \eqr{Fq}.
+
+
+This paper aims at computing/approximating the scale function $W_{\q}(x)$,
+using its moments. The techniques being used are classic: \Pd and Laguerre
+expansions.  The order $(m,n)$ Pad\'e approximation of a function $g(x)$ is
+a rational function in the form
+\[
+R(x)=\frac{a_0+a_1 x+a_2 x^2+...+a_m x^m}{1+b_1 x+b_2 x^2+...+b_n x^n}
+\]
+for which
+$R(0)=g(0),R'(0)=g'(0),R''(0)=g''(0),...,R^{(m+n)}(0)=g^{(m+n)}(0)$.  In
+the context of probability distributions, given a density function $f(x)$
+and its \LT \ $\H f(s)$, the inverse Laplace transform of the order $(m,m)$
+Pad\'e approximant of $\H f(s)$ provides a matrix exponential approximation
+of $f(x)$ that matches the first $2m$ moments of $f(x)$ (including $m_0$).
+In \cite{avram2011moments} this approach was used to approximate ruin probabilities.  In
+this paper we develop the same approach to approximate the scale function
+$W_{\q}(x)$ (Section~\ref{s:Pade}).  An extension of the above idea is the
+so-called two-point Pad\'e approximation which allows to match not only the
+moments of $W_{\q}(x)$ but also the behavior of the function at 0, i.e., to
+match $W_{\q}(0)$, $W'_{\q}(0),...$ (Section~\ref{sec:low1}).
+For more details of this extension see  \cite{ABH} where ruin
+probabilities are approximated.
+
+
+\begin{comment}
+  \beR   Note that when $\q=0$, the scale function $W_0$ coincides, up to
+  a \prop  \ct,  with the well-studied  \surp \ (just compare \eqr{WLT}
+  with the famous \PK  \LT \ \eqr{PK0}).
+  It appears thus that at the slight additional expense of inverting
+  the  \LT \ \eqr{WLT} instead of  \eqr{PK0}, one may obtain the solution of numerous sophisticated control problems \cite{Kyp,AGV} (which are however similar
+  in effort to obtaining ruin probabilities).
+\eeR
+\end{comment}
+
+Let us draw attention now to several numeric challenges which were absent in the \rp \prob.
+\BEN \im
+{\bf Optimizing dividends} starts by optimizing the so called ``barrier function'' \be H_D(b):=\frac {1}{ W'_\q(b)}, \; b \geq 0, \la{GDeF}\ee
+   and   the optimal dividend policy is  often simply a barrier strategy at its   maximum. This is the case in particular when the barrier function $H_D(b)$  is differentiable
+with
+\be H_D'(0) >0 Eq W''_\q(0) <0\ee
+and has a unique local maximum $b^*>0 \Lra W''_\q(b^*)=0$; then this $b^*$ yields the optimal dividend policy, and
+the optimal barrier function,
+  \be \la{dbpr} V(x):= sup_{b \geq 0} V^{b]}(x)=V^{b^*]}(x),\ee
+  turns out to be the largest concave minorant  of  $W_\q(x)$.\fn[4]{Even when barrier strategies do not  achieve the  optimum,  and  multi-band policies must be used instead, constructing the solution must start by
+  determining the global maximum of the barrier function   \cite{AM05,Schmidli,APP15}.}
+
+\im {\bf The challenge of multiple inflection points}.
+  In the presence of several inflection points, however,  the optimal policy is multiband \cite{AM05,Schmidli,Loef,APP15}.
+The first numerical examples of multiband policies  were produced in \cite{AM05,Loef}, with  Erlang claims $Erl_{2,1}$. However, it was shown in \cite{Loef} that multibands cannot occur when $W'_\q(x)$ is increasing after its  last global minimum  $b^*$ (i.e., when no local minima are allowed after the global minimum).
+
+
+  \cite{Loef} further made the interesting  observation that for Erlang claims $ER_{2,1}$  (which are non-monotone), multiband policies may occur  for volatility \pars \ $\s$ smaller than a threshold value, but  barrier policies (with non-concave value function!) will occur when $\s$ is large  enough.
+
+ Figure \ref{f:pd} displays the first derivative $W_\q'(x),$ for $\s^2/2 \in \{\frac{1}{2}, 1,\frac{3}{2},2\}$. The last two values yield barrier policies with non-concave value function, due to the presence of an inflection point in the interior of the interval $[0,b^*]$.
+   \figu{pd-eps-converted-to}
+   {Graphs of the Loeffen example for $\k(s)= \frac{\s^2 s^2}{2}+c \; s+\l
+   \left(\frac{1}{(s+1)^2}-1\right), c=\frac{107 }{5}, \l=10, q=\frac{1}{10} $, $\s^2/2 \in \{ \color{blue} 1/2, \color{yellow}1, \color{green} 3/2, \color{red} 2 \color{black}\} $.}{0.6}
+
+
+
+
+\EEN
+
+ Below we will investigate whether our approximations are precise enough to
+ yield reasonable approximations for $ W''_\q(0) $ and the root(s) of $
+ W''_\q(\cdot)$.
+
+{\bf Special features}. While our methods consist essentially of \Pd \
+and \LTW \LT \ inversion, we found that exploiting the special features of
+our problem is useful. These are:\BEN \im including known values of
+$W_\q(0), W_\q'(0)$ (using thus two-point \Pds). \im shifting the
+approximations around $\Fq$ specified in \eqr{Fq}, which transforms
+$W_\q(x)$ into a \surp. As a consequence, we end up using a certain
+judicious choice of the Laguerre exponential decay parameter \eqr{al},
+which is usually left to be tuned by the user in the \LTW \
+method \cite{weideman1999algorithms}.
+\EEN
+

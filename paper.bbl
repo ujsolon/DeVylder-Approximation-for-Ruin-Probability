@@ -1,0 +1,102 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{ACH11}
+
+\bibitem[AA10]{AA}
+Hansj{\"o}rg Albrecher and S{\"o}ren Asmussen, \emph{Ruin probabilities},
+  vol.~14, World Scientific, 2010.
+
+\bibitem[ABH18]{ABH}
+F~Avram, AD~Banik, and A~Horvath, \emph{Ruin probabilities by pad{\'e}’s
+  method: simple moments based mixed exponential approximations (renyi, de
+  vylder, cram{\'e}r--lundberg), and high precision approximations with both
+  light and heavy tails}, European Actuarial Journal \textbf{9} (2018), no.~1,
+  273--299.
+
+\bibitem[ACH11]{avram2011moments}
+F.~Avram, DF~Chedom, and A.~Horvath, \emph{On moments based {P}ad{\'e}
+  approximations of ruin probabilities}, Journal of computational and applied
+  mathematics \textbf{235} (2011), no.~10, 3215--3228.
+
+\bibitem[AM05]{AM05}
+P.~Azcue and N.~Muler, \emph{Optimal reinsurance and dividend distribution
+  policies in the {C}ram{\'e}r-{L}undberg model}, Mathematical Finance
+  \textbf{15} (2005), no.~2, 261--308.
+
+\bibitem[APP07]{APP}
+F.~Avram, Z.~Palmowski, and M.~R. Pistorius, \emph{On the optimal dividend
+  problem for a spectrally negative {L\'e}vy process}, The Annals of Applied
+  Probability \textbf{17} (2007), no.~1, 156--180.
+
+\bibitem[APP15]{APP15}
+\bysame, \emph{On {G}erber--{S}hiu functions and optimal dividend distribution
+  for a {L\'e}vy risk process in the presence of a penalty function}, The
+  Annals of Applied Probability \textbf{25} (2015), no.~4, 1868--1935.
+
+\bibitem[Ber98]{Ber}
+Jean Bertoin, \emph{L{\'e}vy processes}, vol. 121, Cambridge university press,
+  1998.
+
+\bibitem[BHT05]{BoHoTe05}
+A.~Bobbio, A.~Horv\'ath, and M.~Telek, \emph{Matching three moments with
+  minimal acyclic phase type distributions}, Stochastic Models \textbf{21}
+  (2005), 303--326.
+
+\bibitem[Bin76]{Bingham}
+Nicholas~H Bingham, \emph{Continuous branching processes and spectral
+  positivity}, Stochastic Processes and their Applications \textbf{4} (1976),
+  no.~3, 217--242.
+
+\bibitem[dF57]{deF}
+B.~de~Finetti, \emph{Su un'impostazione alternativa della teoria collettiva del
+  rischio}, Transactions of the XVth international congress of Actuaries,
+  vol.~2, 1957, pp.~433--443.
+
+\bibitem[DG91]{dufresne1991risk}
+F.~Dufresne and H.U. Gerber, \emph{Risk theory for the compound poisson process
+  that is perturbed by diffusion}, Insurance: mathematics and economics
+  \textbf{10} (1991), no.~1, 51--59.
+
+\bibitem[GSS08]{gerber2008methods}
+Hans~U Gerber, Elias~SW Shiu, and Nathaniel Smith, \emph{Methods for estimating
+  the optimal dividend barrier and the probability of ruin}, Insurance:
+  Mathematics and Economics \textbf{42} (2008), no.~1, 243--254.
+
+\bibitem[Kyp14]{Kyp}
+A.~Kyprianou, \emph{Fluctuations of l{\'e}vy processes with applications:
+  Introductory lectures}, Springer Science \& Business Media, 2014.
+
+\bibitem[Loe08]{Loef}
+R.~L. Loeffen, \emph{Stochastic control for spectrally negative l{\'e}vy
+  processes}, PhD Thesis, University of Bath, 2008.
+
+\bibitem[MM61]{miller1961dividend}
+M.~H. Miller and F.~Modigliani, \emph{Dividend policy, growth, and the
+  valuation of shares}, The Journal of Business \textbf{34} (1961), no.~4,
+  411--433.
+
+\bibitem[Sch07]{Schmidli}
+Hanspeter Schmidli, \emph{Stochastic control in insurance}, Springer Science \&
+  Business Media, 2007.
+
+\bibitem[Sko62]{sk62}
+A.~V. Skorokhod, \emph{Stochastic equations for diffusion processes in a
+  bounded region. ii}, Theory of Probability \& Its Applications \textbf{7}
+  (1962), no.~1, 3--23.
+
+\bibitem[Sup76]{Suprun}
+V.~N. Suprun, \emph{Problem of destruction and resolvent of a terminating
+  process with independent increments}, Ukrainian Mathematical Journal
+  \textbf{28} (1976), no.~1, 39--51.
+
+\bibitem[Wei99]{weideman1999algorithms}
+JAC Weideman, \emph{Algorithms for parameter selection in the weeks method for
+  inverting the laplace transform}, SIAM Journal on Scientific Computing
+  \textbf{21} (1999), no.~1, 111--128.
+
+\end{thebibliography}

@@ -1,0 +1,69 @@
+The Laplace transform of $ \psi(x)$ and $\overline{\psi}(u)$ are respectively given by the so called \textbf{Pollaczek-Khinchine} :  \\
+ \begin{equation}
+ \begin{split}
+ \widehat{\psi}(s)=\int_{0}^{\infty}e^{-sx}\psi(x)dx =\frac{1}{s}- \frac{1-\rho}{s-\frac{\lambda}{c}(1-\hat{f}(s))}=\frac{1}{s}\left( 1-\frac{1-\rho}{1-\rho \hat{f}_{e}(s)}\right).
+ = \rho\frac{\widehat{\overline{F}}_{e}(s)}{1-\rho\hat{f}_{e}(s)} \\ \\
+ \Leftrightarrow \widehat{\overline{\psi}}(s)= \int_{0}^{\infty}e^{-sx}\overline{\psi}(x)dx =\frac{c(1-\rho)}{k(s)}=\frac{1-\rho}{s(1-\rho\hat{f}_{e}(s))}
+  \end{split}
+ \end{equation} \\
+ Where $\hat{f}(s)=\int_{0}^{\infty}e^{-sx}dF(x)$, $\overline{F}(x) =1-F(x)$ \\
+  $f_{e}(x)= \overline{F}(x)/m_{1}$:\textit{ which denotes the stationary excess density of the claims; ($\int_{0}^{\infty} \overline{F}(x)dx = m_{1})$} \\
+  $\hat{f}_{e}(s)= \int_{0}^{\infty}e^{-sx}f_{e}(x)dx =(1-\hat{f}(s))/(m_{1}s)$,$ \widehat{\overline{F}}_{e}(s)=(1-\hat{f}_{e}(s))/s$. \\
+ \subsection*{Proof:}
+ Using the Laplace transform of the ruin probability that satisfy the integro-differential equation of \textcolor{blue}{[IfM3, eq.(13.9)]} which gives: \\
+ \begin{equation}
+ \hat{\psi}(s)= \frac{c\psi(0)- \lambda \widehat{\overline{F}}(s)}{cs(1-\lambda \widehat{\overline{F}}(s))}
+ \end{equation} \\
+ Now by substituting $s=0$ in the denominator we can clearly see that the denominator explodes into zero which means that we have a singularity at this point. We assume that our probability of ruin declines fast enough to have a finite integral .Then in order to have $\widehat{\psi}(0)=\int_{0}^{\infty}\psi(x)dx < \infty$ it is necessary to check that the numerator admits also a singularity in zero. \\
+ To achieve this we'll need a results that's easy to demonstrate based on integration by parts, we obtain the Laplace transformation of the survival function in terms of the density transformation mentioned above, we get: \\
+ \begin{equation}
+ \widehat{\overline{F}}(s)= \frac{1-\hat{f}(s)}{s} , \\ \widehat{\overline{F}}(0)= \int_{0}^{\infty}\overline{F}(x)dx = m_{1}
+ \end{equation}\\
+ As the denominator becomes $0$ for $s=0$ and $\widehat{\psi}(0)<\infty$ then: \\
+ \begin{equation}
+ \psi(0) =\frac{\lambda \int_{0}^{\infty}\overline{F}(x)dx}{c} =\frac{\lambda m_{1}}{c} := \rho.
+ \end{equation}\\
+ For the survival probability, we use $ \overline{\psi}(x)= 1- \psi (x)$. Thus we obtain
+\begin{equation}
+  \widehat{\overline{\psi}}(s) =\frac{1}{s} - \widehat{\psi}(s). , \\ \overline{\psi}(0)= 1- \frac{\lambda m_{1}}{c} = 1-\rho.
+  \end{equation} \\
+ Hence the result.
+
+ \subsection{Corollary:}
+ The ruin probability $\psi(u)$ is  $1$ for all u when $\rho \geq 1$ , and $< 1$ for all u when $ \rho< 1$.
+ \newpage
+
+ \section{The Pollaczek-Khinchine formula}
+We shall here exploit the decomposition of the claims process as sum of ladder heights. Since our model is a \textit{compound Poisson process}, then the ladder heights are i.i.d. \\
+Let us recall the Laplace transform defined in \textcolor{red}{(4)}.\\
+ We have $ \frac{1}{1-\rho \hat{f}_{e}(s)}$ is expandable in a geometric series, and by inverting the Laplace transform we get:
+\begin{equation}
+\overline{\psi}(u)= \sum_{n=0}^{\infty} (1-\rho) \  \rho^{n} \ F_{e}(u)^{\star n} \ \Leftrightarrow \psi (u)= \sum_{n=1}^{\infty} (1-\rho) \  \rho^{n} \  \overline{F}_{e}(u)^{\star n}
+\end{equation} \\
+Reciprocally, from \textcolor{red}{(9)}, we calculate its Laplace transform, the convolution becomes product, and easily we find \textcolor{red}{(4)}.\\
+To intepret this formula, we would need the following definition.
+
+\subsection{Definition:}
+The variable $ Y= X_{\tau}\mid \left\{ \tau <\infty ,  \ X_{0}= u\right\} >0$  is the severity of ruin. \\ \\
+Let $S_{\tau_{-}}$ denotes the first (weak) descending ladder heights past u (defined on $\left\{ \tau_{-}< \infty \right\}$ only).
+\subsection{Geometric Interpretation:}
+Let's take the graph of \textbf{Cramèr-Lundberg} model with initial capital u.\\
+Let's assume that on our kth descending ladder heights ruin occurs. \\  The ruin severity density is denoted by $f_{e}$ as defined above. \\
+We try to decompose the initial reserve of the Cramèr-Lundberg model as well as the severity of ruin as the sum of the kth ladder heights. \\
+We will call a walk without jumps strictly greater than 1 up/down continuous up/down. So when we take a walk that goes up, the walk will have a finite number of ladder heights down, so the number of ladder heights down is finite, we will denote it by \textbf{N}. We assume that \textbf{N} is a geometric varible with parameter $\rho$.
+\newpage
+Thus, for $N=0$
+\begin{equation*}
+\overline{\psi}(u)= 1- \rho.
+\end{equation*}
+ and for $N=1$
+ \begin{equation*}
+ \overline{\psi}(u)= (1-\rho) \ \rho \ \mathbb{P}( S_{\tau_{-}}< \ u)
+ \end{equation*} \\
+ Further, The law of the ladder heights is the law of equilibrium $ F_{e}$. \\
+ Therefore, \\
+ \begin{equation*}
+ \overline{\psi}(u) = (1-\rho) \ \rho^{n} \ F_{e}(u)^{\star u}
+ \end{equation*} \\
+ So the ruin occurs if and only if the total sum of the heights exceeds u.
+ 

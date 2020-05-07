@@ -1,0 +1,92 @@
+% -*- TeX:EN:UNIX; ispell-local-dictionary: "american"; TeX-master: "ratrisk"; -*-
+
+{\bf Contents}. We briefly review  classical ruin theory in Section \ref{s:RT}. Pad\'e approximations are provided  in Section \ref{s:Pade}, where we also
+    spell out  the simplest algorithm for the  computation of the \sf. % \ and of the optimal dividend barrier.
+   %The de Finetti dividends \prob \ for the  spectrally negative \lev risk model is reviewed in section \ref{s:div}.
+In Section~\ref{sec:low1}, we derive  low-order Pad\'e and two-point Pad\'e approximations of $W_\q(x)$, reminiscent
+   of the  \deV approximation of the ruin probability. Some of these \app s  appeared already in \cite{gerber2008methods}, where however the Pad\'e method and the fact that they can be easily extended to higher orders is not mentioned.
+  Section~\ref{s:two} offers our personal strategy for inverting \LTs \ of interest in probability, in the presence of uncertainty.
+ Subsection~\ref{s:LTW} implements the Laguerre-Tricomi-Weeks \LT \ inversion  with a certain judicious choice of the exponential decay parameter \eqr{al}, which is believed to be new.  Section~\ref{s:mix} presents numeric experiments
+   with \mix claims.
+   Section~\ref{s:ht} presents experiments
+   with Pareto claims; since these have heavy tail and, consequently, finitely many
+    moments, we apply ``shifted'' Pad\'e approximation of the claim distribution.
+   %for high order approximations, one is forced to make appeal to shifted Pad\'e approximation (SP), which is reviewed in Section~\ref{P}.
+   Section~\ref{s:WH} includes a computer program required to obtain test cases with exact rational answers, using the \WH \ factorization; of course, this is quite convenient for the initial testing  of the precision of our algorithms.
+   Finally, Section~\ref{s:Tricomi} reviews a more general version of the \LTW \ Laplace inversion method, which may be of interest for further experiments.
+   %Section~\ref{s:Gam} presents numeric experiments
+   %with the Gamma risk process.
+\iffalse The subordinator risk model  perturbed by Brownian motion
+ is introduced in section \ref{s:soph} -- see \eqr{eq:per} for  the two  formulas for ruin \pros (by creeping and by jump).
+ \fi
+
+
+\iffalse
+Section~\ref{P} provides a probabilistic interpretation of shifted Pad\'e approximation (SP).  An illustration
+of the superiority of SP on classic Pad\'e is provided in Section \ref{s:uni} on  a case with compact
+support, the third example given in \cite{gzyl2013determination}
+with claims of uniform law $\mL(C_i)=\mU_{[0,1]}$.  We have found that
+Pad\'e and shifted Pad\'e approximations provide matrix exponential
+approximations of the claim density that are not admissible on $[0,\infty)$
+(i.e., the density is not always positive) but the $L_1$ errors of these
+approximations are much lower than that of some approximations that impose
+non-negativity. Furthermore, the resulting ruin probabilities are quite precise, and may be  admissible even when the density claim approximations aren't.
+
+
+ In Section \ref{id9} we turn to heavy-tailed claims.
+%and the programs used are offered at the web page \red{...}.
+As documented, {SP approximation leads to very
+accurate approximation of ruin probabilities for Pareto claim size when
+compared to results obtained using the fixed Talbot algorithm
+(FT) \cite{abate2004multi}, which is quasi-exact in this kind of problems,
+see \cite{AAK}.
+\fi
+
+\section{A short review of classical ruin theory} \la{s:RT}
+
+
+ The process defined in (\ref{CLp}) is  a particular example of  spectrally negative L\'evy processes,   with finite mean,  which are defined by assuming instead of \eqr{CLp} that $S_t$ is a  subordinator with $\s$-finite \Lm \ $\lm(dx)$ that integrates $x$, but having possibly infinite activity  near the origin $\lm(0,\I)=\I$ \cite{Ber} (for \eqr{CLp}, the \Lm \ is given by $\lm(dx)=\l F(dx) \Lra \lm(0,\I)=\l$).
+ A spectrally negative L\'evy process is characterized by its
+L\'evy-Khintchine/Laplace exponent/{cumulant generating function/symbol} $\k(s)$ defined by $E_0 \big[e^{s X(t)}\big]=e^{t \k(s)}$, with $\k(s)$ of the particular form
+\be  \k(s)=  c s +   \int_0^\I
+(e^{-s x}-1) \lm(d x)+\frac {\s^2 s^2}2 :=s \le(c -
+\H{\ol{\lm}}(s)
++\fr{\s^2}2 s\ri).\la{kf}
+\ee
+
+Some concepts of %central
+interest in classical risk theory are:
+\BI
+\im   { \em First passage times}
+below and above a level $a$:  \begin{equation*} T_{a,-(+)} : = \inf\{t > 0: X(t) <(>)
+a\}.\end{equation*}
+%We will denote $\tz$ by $\t$.
+\iffalse
+\im The  {\em maximal aggregate loss} $L$
+\beq \la{e:L} L_T:=\max_{0 \leq t < T} S(t)- ct, %-\s B(t)
+L:=L_\I
+\eeq
+(the negative of the all-time infimum of the process
+${X}$  started from $0$).
+\fi
+\im The first first passage quantity to be studied  historically was the  {\em eventual ruin probability}:
+\be \la{rp0}\Rui(x):=P[\tz <\infty | X(0) = x].%= P[L >u].
+\ee
+
+In order that the eventual ruin probability  not be identically $1$, the  parameter
+$$  p:=c -\l m_1 =\k'(0),  \text{ where } m_1=\int_0^\I z F(dz),$$
+which is called  drift or profit rate,  must be assumed positive.
+
+The \LT \ of the \rp
+is explicit, given by the so called \PK formula, which states
+ that the \LT \ of $\ovl \Rui(x)=1-
+\Rui(x)$ is:
+\be\label{PK0} \H \sRui (s)=\int_0^\I e^{-s x} \ovl \Rui(x)dx=\frac{c-\l m_1}{\k(s)}=\frac{\k'(0)}{\k(s)}.\ee
+ \EI
+
+
+
+The  roots with negative real part of the Cram\'er Lundberg equation \be \la{CLeq} \k(s)= \q, \q \geq 0\ee are  important, when such roots exist. They will be denoted by  $- \g_1, - \g_2 , \cdots, - \g_N, N \geq 0 $, and ordered by  their absolute
+values  $| \g_1| \leq  |\g_2 | \leq ..., \leq | \g_N|$. $\g_1>0$ is  called the adjustment coefficient, and furnishes
+the Cram\'er-Lundberg asymptotic approximation $$\Rui(u) \sim \fr{\k'(0)}{-\k'(-\g_1)} e^{-\g_1
+u}.$$

@@ -1,0 +1,73 @@
+\section{De Vylder approximation}
+ An approximation of the ruin probability, in the absence of the Gaussian component,is given explicitely in this section by the \textit{De Vylder} approximation which is a Padé approximation of the \textit{Pollaczek-Khinchin} transform for the classical \textbf{Cramèr-Lundberg} model.\\
+ In the case of exponentially distributed claim size, the main idea of De Vylder is based on replacing the risk reserve process {$X(t)$} by another risk process { $\tilde{X}(t)$} such that for some $n\geq 1$ the moments up to order $n$ of certain characteristics of {$ X(t)$} and {$\tilde{X}(t)$} coincide. \\
+ \begin{equation*}
+ X(t)-u = pt -\ \sum_{i=1}^{N_{t}} (C_{i} -\ EC_{i}) = \theta \lambda m_{1}t - \ \sum_{i=1}^{N_{t}} (C_{i} -\ EC_{i})
+ \end{equation*} \\
+ Where $ p:= c- \ \lambda m_{1} =\lambda m_{1} \theta \ > 0$ is the profit rate. \\
+
+ Furthermore, {$\tilde{X}(t)$} is chosen in such a way that the ruin probability $\tilde{\Rui}(u)$ of {$\tilde{U}(t)$} is easier to determine than $\Rui (u)$. \\ \\
+Let us designate by $\mathcal{K}_{k}(Y)$ the k-order cumulant of a random variable $Y$ , i.e. the  coefficients of the Taylor expansion:
+\begin{equation*}
+log( \mathbb{E}e^{u Y}) =\sum_{k=0}^{\infty} \mathcal{K}_{k}(Y)\frac{u^{k}}{k!}
+\end{equation*}
+\subsection{Proposition:}
+$a)$The k-order cumulant of a compound Poisson process $L(t)$ is of the form: \\
+\begin{equation*}
+\mathcal{K}_{k}(L(t)) =\int_{0}^{t} \mathcal{K}_{k}[X(ds)]ds = \lambda t  \int x^{k}f(x) dx, \ \forall k\geq 1.
+\end{equation*} \\
+$b)$
+\begin{equation*}
+\mathcal{K}_{1}(X(t))= pt , \ \mathcal{K}_{2}(X(t)) =t(\sigma^{2} +\lambda \int x^{k}f(x) dx) , \ \mathcal{K}_{k}(X(t))= (-1)^{k}\lambda t \int x^{k} f(x) dx , \ \forall k\geq 3.
+\end{equation*}
+\subsection{DeVylder Approximation:}
+The idea of the \textit{De Vylder} approximation is to replace $X(t)$ by $\tilde{X}(t)$, where $ \tilde{U}(t)$ has exponentially distributed claim size and : \\
+\begin{equation}
+ \mathcal{K}_{k}(X(t)) = \mathcal{K}_{k}(\tilde{X}(t))
+\end{equation}. \\
+Let $\tilde{\lambda}, \ \tilde{p}, \ \tilde{m}$ et $\tilde{\theta}$ the new parameters of $\tilde{U}(t)$, representing respectively the average rate of arrival claim, the profit rate, the loading security coefficient, and the average claim reimbursement amounts. \\
+From \textit{proposition 4.2} ,this implies that \textcolor{red}{(10)} holds if :
+\begin{equation}
+\left\lbrace
+\begin{aligned}
+p= \theta \lambda m_{1} = \tilde{p} =\tilde{\theta}\tilde{\lambda} \tilde{m}_{1} \\
+\lambda m_{2} = 2\tilde{\lambda}\tilde{m}^{2} \\
+\lambda m_{3} = 6\tilde{m}^{3}
+\end{aligned}
+\right.
+\end{equation}
+\newpage
+A computation leads to : \\
+$$\lambda = \frac{2 \tilde{\lambda}\tilde{m}^{2}}{m_{2}}$$
+ $$\tilde{\lambda} =\frac{\lambda m_{3}}{6 \tilde{m}^{3}} =\frac{\lambda m_{3}}{6 (\frac{m_{3}}{3 m_{2}})^{3}} = \frac{9 m_{2}^{3}}{2 m_{3}^{2}}\lambda $$ \\
+ And
+$$\tilde{\theta}= \frac{\lambda m_{1}}{\tilde{\lambda}\tilde{m}}\theta =\frac{2 m_{1}m_{3}}{3m_{2}^{2}}\theta$$ \\
+Now we use the first $2n$ ruin moments $ \lambda_{1}=\frac{\tilde{m}_{1}}{\theta}, \ \lambda_{2}= \frac{\tilde{m_{2}}}{2 \theta} + \ (\frac{\tilde{m}^{2}}{\theta})^{2}, ..., \lambda_{2n-1}.$ \\
+For $n=1$, one may set up a system for the Padé $(0,1)$ approximation in $0$ , and from the Laplace transform of ruin probability in \textcolor{red}{(4)}, we obtain:
+\\
+\begin{equation*}
+\begin{split}
+\widehat{\Rui}_{DV}(s)= \frac{1}{s} - \ \frac{p}{s(p+ \lambda m_{2}s/2 -\lambda m_{3}s^{2/6}+...)} \\ \\
+= \frac{\lambda m_{2}/2 - \lambda m_{3}s/6+...}{p+  \lambda m_{2}s/2 -\lambda m_{3}s^{2/6}+...}
+\approx \frac{a}{s+b} \\ \\
+\Leftrightarrow as( p+  \lambda m_{2}s/2 -\lambda m_{3}s^{2/6}+...) \\ \\
+\approx (s+b)( \lambda m_{2}s/2 - \lambda m_{3}s^{2}/6+...) \\ \\
+\Leftrightarrow ap= b \lambda m_{2}/2 , \ a m_{2}/2= m_{2}/2 - \ b m_{3}/6 \\ \\
+\Leftrightarrow
+a= \frac{3 \lambda m_{2}^{2}}{3 \lambda m_{2}^{2} + 2p m_{3}} , \ b= \frac{6 p m_{2}}{3 \lambda m_{2}^{2}+ 2 p m_{3}}.
+\end{split}
+\end{equation*} \\
+This leads to the \textbf{DeVylder}'s famous approximation.
+\begin{equation}
+\Rui_{DV}(u) \approx a e^{-bu}
+\end{equation}
+\newpage
+
+Hence
+\begin{equation}
+\Rui_{DV}(u) = \frac{1}{1+ \tilde{\theta}} \ exp \left( - \frac{u \tilde{\theta} \mu}{1+ \tilde{\theta}} \right)
+\end{equation}
+Where $ \mu =\frac{3 m_{2}}{m_{3}}, \ \tilde{\theta}= \frac{2 p m_{3}}{3 \lambda m_{2}^{2}} = \ \frac{2 m _{1} m_{3}}{3 m_{2}^{2}} \theta$ represent the exponential reimbursement rate and the relative safety factor in the associated process $\tilde{X}(t)$, respectively.
+
+
+

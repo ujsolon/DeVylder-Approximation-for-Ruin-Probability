@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.30)  7 MAY 2020 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.30)  16 MAY 2020 06:40
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -684,68 +684,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-{C:/Users/UJ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (int0.tex
-
-LaTeX Warning: Citation `dufresne1991risk' on page 2 undefined on input line 5.
-
-
-
-LaTeX Warning: Citation `AA' on page 2 undefined on input line 5.
-
-
-LaTeX Warning: Citation `deF' on page 2 undefined on input line 32.
-
-
-LaTeX Warning: Citation `miller1961dividend' on page 2 undefined on input line 
-33.
-
-
-LaTeX Warning: Citation `sk62' on page 2 undefined on input line 47.
-
-[2]
-
-LaTeX Warning: Citation `APP' on page 3 undefined on input line 51.
-
-
-LaTeX Warning: Citation `Suprun' on page 3 undefined on input line 52.
-
-
-LaTeX Warning: Citation `Ber' on page 3 undefined on input line 52.
-
+{C:/Users/UJ/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (int0.tex [2]
 Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Bingham' on page 3 undefined on input line 87.
+LaTeX Warning: Reference `f:pd' on page 3 undefined on input line 82.
+
+[3]
+
+LaTeX Warning: Reference `s:Pade' on page 4 undefined on input line 104.
 
 
-LaTeX Warning: Citation `Ber' on page 3 undefined on input line 87.
-
-
-LaTeX Warning: Citation `Kyp' on page 3 undefined on input line 87.
-
-
-LaTeX Warning: Reference `f:pd' on page 3 undefined on input line 89.
-
-
-LaTeX Warning: Citation `APP' on page 3 undefined on input line 90.
-
-
-LaTeX Warning: Citation `Schmidli' on page 3 undefined on input line 90.
-
-
-LaTeX Warning: Citation `APP15' on page 3 undefined on input line 90.
-
-
-LaTeX Warning: Citation `avram2011moments' on page 3 undefined on input line 10
-9.
-
-
-LaTeX Warning: Reference `s:Pade' on page 3 undefined on input line 111.
-
-
-LaTeX Warning: Citation `ABH' on page 3 undefined on input line 115.
-
-
-Overfull \hbox (5.41469pt too wide) in paragraph at lines 102--117
+Overfull \hbox (5.41469pt too wide) in paragraph at lines 95--110
 \T1/cmr/m/n/12 for which $\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 (0) = \OML/cmm/m/it
 /12 g\OT1/cmr/m/n/12 (0)\OML/cmm/m/it/12 ; R[]\OT1/cmr/m/n/12 (0) = \OML/cmm/m/
 it/12 g[]\OT1/cmr/m/n/12 (0)\OML/cmm/m/it/12 ; R[]\OT1/cmr/m/n/12 (0) = \OML/cm
@@ -753,66 +702,24 @@ m/m/it/12 g[]\OT1/cmr/m/n/12 (0)\OML/cmm/m/it/12 ; :::; R[]\OT1/cmr/m/n/12 (0)
 = \OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (0)$\T1/cmr/m/n/12 .
  []
 
-[3] Excluding 'comment' comment.
+Excluding 'comment' comment. [4]
 
-LaTeX Warning: Citation `AM05' on page 4 undefined on input line 139.
+LaTeX Warning: Reference `f:pd' on page 5 undefined on input line 141.
 
-
-LaTeX Warning: Citation `Schmidli' on page 4 undefined on input line 139.
-
-
-LaTeX Warning: Citation `APP15' on page 4 undefined on input line 139.
-
-
-LaTeX Warning: Citation `AM05' on page 4 undefined on input line 142.
-
-
-LaTeX Warning: Citation `Schmidli' on page 4 undefined on input line 142.
-
-
-LaTeX Warning: Citation `Loef' on page 4 undefined on input line 142.
-
-
-LaTeX Warning: Citation `APP15' on page 4 undefined on input line 142.
-
-
-LaTeX Warning: Citation `AM05' on page 4 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Loef' on page 4 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Loef' on page 4 undefined on input line 143.
-
-[4]
-
-LaTeX Warning: Citation `Loef' on page 5 undefined on input line 146.
-
-
-LaTeX Warning: Reference `f:pd' on page 5 undefined on input line 148.
-
-<pd-eps-converted-to.pdf, id=34, pagebox=cropbox, 361.35pt x 219.82124pt>
+<pd-eps-converted-to.pdf, id=31, pagebox=cropbox, 361.35pt x 219.82124pt>
 File: pd-eps-converted-to.pdf Graphic file (type pdf)
 <use pd-eps-converted-to.pdf>
-Package pdftex.def Info: pd-eps-converted-to.pdf  used on input line 151. on in
-put line 151.
+Package pdftex.def Info: pd-eps-converted-to.pdf  used on input line 144. on in
+put line 144.
 Package pdftex.def Info: Requested size: 234.00238pt x 142.35214pt on input lin
-e 151.
+e 144.
 [5 <./pd-eps-converted-to.pdf>]
 
-LaTeX Warning: Reference `al' on page 6 undefined on input line 168.
-
-
-LaTeX Warning: Citation `weideman1999algorithms' on page 6 undefined on input l
-ine 170.
+LaTeX Warning: Reference `al' on page 6 undefined on input line 161.
 
 ) (cts.tex
 
 LaTeX Warning: Reference `s:Pade' on page 6 undefined on input line 3.
-
-
-LaTeX Warning: Citation `gerber2008methods' on page 6 undefined on input line 7
-.
 
 
 LaTeX Warning: Reference `s:two' on page 6 undefined on input line 8.
@@ -834,9 +741,6 @@ LaTeX Warning: Reference `s:WH' on page 6 undefined on input line 15.
 
 
 LaTeX Warning: Reference `s:Tricomi' on page 6 undefined on input line 16.
-
-
-LaTeX Warning: Citation `Ber' on page 6 undefined on input line 48.
 
 [6]
 Overfull \hbox (47.44476pt too wide) in paragraph at lines 89--91
@@ -895,7 +799,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--48
 
  []
 
-[10]) (low1.tex
+[10]) (Dev2.tex
+Overfull \hbox (33.95216pt too wide) detected at line 28
+[]
+ []
+
+[11]
+Overfull \hbox (53.2865pt too wide) detected at line 32
+ $\OML/cmm/m/it/12 asleft\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 cs \OT1/cmr/m/n/12 +
+ [] \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 s [] right\OT1/cmr/m/n/12 ) \OMS/cmsy/
+m/n/12  \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s \OT1/cmr/m/n/12 + \OML/cmm/m/it/12
+ b\OT1/cmr/m/n/12 ) []$ 
+ []
+
+) (low1.tex
 Overfull \hbox (45.48407pt too wide) in alignment at lines 7--13
  [][][] []
  []
@@ -908,7 +825,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
-
+ [12]
 Overfull \hbox (14.55237pt too wide) in paragraph at lines 30--36
 \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 =$\T1/cmr/m/it/12 , jump rate $\OML/cmm/m/it
 /12 $\T1/cmr/m/it/12 , pre-mium rate $\OML/cmm/m/it/12 c > \OT1/cmr/m/n/12 0$\
@@ -916,37 +833,22 @@ T1/cmr/m/it/12 , and La-place ex-ponent $\OML/cmm/m/it/12 \OT1/cmr/m/n/12 (\OM
 L/cmm/m/it/12 s\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 s []$\T1/cmr/m/it/12 ,
  []
 
-[11]
+
 Overfull \hbox (28.61525pt too wide) detected at line 53
  $\OML/cmm/m/it/12 b[] \OT1/cmr/m/n/12 = [] [] \OML/cmm/m/it/12 ;$  
  []
 
-
-LaTeX Warning: Citation `APP' on page 12 undefined on input line 57.
-
-[12]
-
-LaTeX Warning: Citation `gerber2008methods' on page 13 undefined on input line 
-81.
-
-
+[13]
 Overfull \hbox (8.18813pt too wide) in alignment at lines 87--90
  [][][] []
  []
 
-
-LaTeX Warning: Citation `BoHoTe05' on page 13 undefined on input line 91.
-
-
-LaTeX Warning: Citation `gerber2008methods' on page 13 undefined on input line 
-94.
-
-) (ap.tex
+[14]) (ap.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-[13]
+
 Overfull \hbox (50.19333pt too wide) detected at line 8
  $[][]$  
  []
@@ -956,7 +858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-
+[15]
 Overfull \hbox (3.95099pt too wide) in paragraph at lines 13--14
 []\T1/cmr/m/n/12 Using the La-place trans-form of the ruin pro-ba-bi-lity that 
 sa-tisfy the integro-
@@ -972,65 +874,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--19
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-[15]
+[16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 47--49
 
  []
 
-[16]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
  []
 
-)
-No file paper.bbl.
-[17] (paper.aux)
+) (paper.bbl [19]) [20] (paper.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5529 strings out of 493312
- 71603 string characters out of 3138908
- 151094 words of memory out of 3000000
- 8933 multiletter control sequences out of 15000+200000
- 25435 words of font info for 67 fonts, out of 3000000 for 9000
+ 5540 strings out of 493312
+ 71833 string characters out of 3138908
+ 152241 words of memory out of 3000000
+ 8938 multiletter control sequences out of 15000+200000
+ 26131 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,20n,35p,457b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ect
-i0800.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecbi1200.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
-\ec\dpi600\ecbx1440.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\eccc1200.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\UJ\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\UJ\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\UJ\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\UJ\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Us
-ers\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>
- <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
-440.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on paper.pdf (17 pages, 343321 bytes).
+ 41i,20n,35p,643b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
+x1095.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ecti1095.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm1095.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecti0800.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\UJ\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\UJ\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\UJ\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\UJ\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Us
+ers\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk>
+ <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1
+200.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1728.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecrm1440.pk> <C:\Users\UJ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cm
+ex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb>
+Output written on paper.pdf (20 pages, 401696 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
+ 694 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

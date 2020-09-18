@@ -1,0 +1,219 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}\usepackage{pdfsync}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{bbm,graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\baselineskip=14.4pt \topmargin=-0.2cm\textwidth=16.45cm %\textheight=658pt
+\textheight=23cm
+\oddsidemargin=-0.65cm\evensidemargin=-0.65cm\headsep=20pt
+
+\newtheorem{thm}{THEOREM}%[section]
+\newtheorem{assumption}[thm]{ASSUMPTION}
+\newtheorem{cor}[thm]{COROLLARY}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{definition}[thm]{DEFINITION}
+\newtheorem{example}[thm]{EXAMPLE}
+\newtheorem{proposition}[thm]{PROPOSITION}
+\newtheorem{remark}[thm]{REMARK}
+\def\beXa{\begin{example}} \def\eeXa{\end{example}}
+\def\eeD{\end{definition}} \def\beD{\begin{definition}}
+\def\beR{\begin{remark}} \def\eeR{\end{remark}}
+\def\beL{\begin{lem}} \def\eeL{\end{lem}}
+\def\beP{\begin{proposition}} \def\eeP{\end{proposition}}
+\def\beC{\begin{cor}} \def\beT{\begin{thm}}
+  \def\eeT{\end{thm}}
+\def\eeC{\end{cor}}
+\def\intr{introduction } \def\lc{loading coefficient}
+\def\Ic{In conclusion, }\def\Nat{Note also that }
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}%//.//
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\pr}[1]{\left(#1\right)} %(.)
+\providecommand{\pp}[1]{\left[#1\right]} %[.]
+\providecommand{\set}[1]{\left\lbrace#1\right\rbrace} %{.}
+\providecommand{\scal}[1]{\left\langle#1\right\rangle}%<.>
+
+%local commands
+\providecommand{\Ptwo}{\mathcal{P}_2\pr{\mathbb{R}^d}}
+\providecommand{\Ltwo}[1]{\mathbb{L}_{\mathcal{F}_{#1}}^2\pr{\mathbb{R}^d}}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:  }} #1}
+\providecommand{\classification}[1]{\textbf{\textit{MSC:  }} #1}
+%\providecommand{\EF}[1,2]{\mathbb{E}^{\mathcal{F}_{#1}}\pp{#2}}
+
+\providecommand\eqD{\stackrel{\mathcal{D}}{=}}
+
+\newcommand{\ex}{\mathbb{E}} \def\ssec{\subsection} \def\Kol{Kolmogorov }
+\def\equ{equation } \def\BC{boundary condition } \def\fund{fundamental } \def\boun{boundary } \def\con{condition } \def\rv{random variable } \def\ind{independent } \def\opt{optimization }
+\def\pb{problem }  \def\pbs{problems } \def\appr{approximation}
+ \def\iid{i.i.d. } \def\adj{adjustment coefficient } \def\Tc{\tilde{c}} \def\Tq{\tilde{q}} \def\Tl{{\tilde{\lambda}}}  \def\mW{{\mathcal W}} \def\w{{\mathbf w}}  \def\fun{function } \def\funs{functions } \def\rui{\psi}
+\def\GS{Gerber-Shiu } \def\vars{random variables }\newcommand{\bff}[1]{{\mbox{\boldmath$#1$}}}
+\def\ts{two-sided } \def\wk{well-known } \def\pros{probabilities }
+\def\prop{proportionality } \def\ct{constant } \def\cts{constants } \def\para{parameter} \def\paras{parameters} \def\wr{with respect to }
+ \def\sub{subordinator } \def\rps{ruin probabilities} \def\ren{renewal equation } \def\JJ{Jacobsen }
+\newcommand{\df}{\mathrm{d}} \def\wk{well-known} \def\ts{two sided exit }
+\newcommand{\dint}{\displaystyle\int}
+\def\G{\Gamma}
+ \def\bs{\bigskip } \def\res{respectively}
+\newcommand{\kil}{\mathbf{e}} \def\procs{processes} \def\proc{process}
+\def\Rui{\Psi} \def\sRui{\ovl{\Rui}}
+\newcommand{\di}{{\rm d}} \def\fp{first passage }
+\def\ovl{\overline}\def\tzp{T_{0,+}}
+\def\lev{L\'evy }  \def\mL{{\mathcal L}} \def\rp{ruin probability} \def\expc{exponential claims}\def\Oth{On the other hand, }
+\def\dd{draw-down } \def\sn{spectrally negative }
+\long\def\symbolfootnote[#1]#2{
+\begingroup
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}
+\endgroup}
+\def\fn{\symbolfootnote}
+\def\den{denominator }
+\def\I{\infty} \def\Eq{\Leftrightarrow}
+\def\und{\underline} \def\unl{\underline} \def\T{\widetilde}
+\def\CL{Cram\'er-Lundberg } \def\WH{Wiener-Hopf } \def\iof{l^{-1}(a)}
+\def\SA{Sparre-Andersen } \def\PH{phase-type }  \def\sat{satisfy }
+\def\BEN{\begin{enumerate}}  \def\BI{\begin{itemize}}
+\def\EEN{\end{enumerate}}   \def\EI{\end{itemize}} \def\im{\item} \def\Lra{\Longrightarrow} \def\De{\Delta} \def\eqr{\eqref} \def\mpr{more precisely, } \def\cof{coefficient}
+\def\no{\nonumber} %\newcommand{\be}{\begin{equation}}
+%\newcommand{\ee}{\end{equation}}
+\def\mG{{\mathcal G}}
+\def\g{\gamma}  \def\d{\delta} \def\de{\delta}  \def\b{\beta}
+\def\z{\zeta}  \def\th{\theta} \def\vt{\vartheta}
+\def\e{\epsilon} \newcommand{\ol}{\overline}
+\def\k{\kappa} \def\l{\lambda} \def\a{\alpha} %\def\W{W}
+\def\Lm{L\'evy measure } \def\thf{therefore } \def\mgf{moment generating function } \def\resp{respectively} \def\how{however} \def\SLG{Shreve, Lehoczky and Gaver} \def\snp{spectrally negative \lev \procs} \def\PK{Pollaczek-Khinchine } \def\LZ{Lokka-Zervos alternative}
+\def\lm{\Pi} \def\x{\xi} \def\ith{it holds that } \def\sf{scale function}
+  \def\r{r} \def\Sp{\Seg \proc}\def\s{\sigma} \def\F{\Phi} \def\Fql{\Phi_{\q+\l}}\def\fmi{for more information}
+  \def\Fq{\Phi_{\q}}\def\f{\varphi}\def\L{L} \def\U{D}
+  \def\satd{satisfied} \def\Z1{Z_{\q,1}}
+  \def\bc{\begin{cases}
+  } \def\gene{generalization }  \def\levs{\lev processes } \def\wlg{w.l.o.g. } \def\cP{compound Poison model }
+\def\ec{\end{cases}} \def\expo{exponential } \def\CIR{Cox-Ingersoll-Ross }
+  \def\qu{\quad} \def\for{\forall}
+  \def\beq{\begin{eqnarray}} \def\eeq{\end{eqnarray}}
+   \def\be{\begin{equation}} \def\ee{\end{equation}}
+\def\bea{\begin{eqnarray*}} \def\rei{reinsurance } \def\adj{adjustment coefficient }\def\mbw{may be written as }\def\Equ{Equivalently, }\def\ms{must satisfy }
+  \def\prf{{\bf Proof:} } \def\satg{satisfying } \def\Eb{\E^{b]}}
+\def\eea{\end{eqnarray*}} \def\la{\label}
+\def\LE{Laplace exponent } \def\LT{Laplace transform} \def\BM{Brownian motion}\def\perf{performance}
+\def\LTs{Laplace transforms} \def\q{q} \def\R{{\mathbb R}}
+\def\le{\left} \def\ri{\right}
+\def\nne{nonnegative } \def\fr{\frac} \def\Y{Y}  \def\t{\tau} \def\ta{T_{a,-}}  \def\tb{T_{b,+}}  \def\tret{T_{\{0\}}}
+\def\tz{T_{0,-}} \def\sec{\section} \def \fe{for example } \def\wlo{w.l.o.g. }  \def\ith{it holds that }\def\genr{generator}
+\def\itf{it follows that } \def\sev{severity of ruin}
+\newcommand{\goto}{\rightarrow} \def\deF{de Finetti } \def\app{approximation}
+\def\oedd{optimal expected discounted cumulative dividends }
+\def\edd{expected discounted cumulative dividends }
+%\theoremstyle{definition}
+ \def\A{\mathcal A} \def\valf{value function}
+\newcommand{\bE}{\mathbb{E}} \def\bsq{\qed} \def\sur{survival }
+\def\Ip{In particular, } \def\cP{compound Poisson }
+\def\pros{probabilities } \def\fund{fundamental }
+\def\rvs{random variables } \def\rv{random variable } \def\gen{generalized }
+\def\nonh{nonhomogeneous } \def\Frt{Furthermore, } \def\expo{exponential } \def\pro{probability }
+\def\prob{problem} \def\probs{problems }  \def\ts{two-sided exit }
+\def\how{however } \def\How{However, } \def\H{\widehat }
+\def\mC{\mathcal C}  \def\os{one-sided } \def\Ga{\Gamma}
+\def\1{\mathop{\rm 1\!\!I}\nolimits}   \def\HG{\widehat{G}}
+\def\mH{\mathcal H} \def\mZ{{\mathcal Z}}  \def\mW{{\mathcal W}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdn}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}} \def\Seg{Segerdahl } \def\rf{retention function }\def\drp{dynamic reinsurance policy }
+\def\prob{problem} \def\probs{problems} \def\proba{probability} \def\str{strong Markov property}
+\def\frt{furthermore } \def\nonh{nonhomogeneous } \def\td{\tau} \def\probas{probabilities} \def\ma{master equation } \def\ker{\varphi_{0}} \def\brp{branching point} \def\dz{\; \fr {d z}{z}}
+\def\strs{strong Markov processes} \def\vfe{}  \def\Ez{\E^{[0}} \def\AY{Azema-Yor } \def\KWP{Kolmogorov-Wong-Pearson }
+\def\splp{spectrally positive L\'evy process}
+\def\cci{complex contour integrals} \def\mcci{the method of complex contour integrals} \def\cgf{cumulants generating function }
+  \def\Itf{It follows that } \def\Mcci{The method of complex contour integrals } \def\wh{where } \def\Ea{\E^{[a}} \def\Eb{\E^{b]}}
+\newcommand{\E}{{\rm I \!E}} \def\OU{Ornstein-Uhlenbeck } \def\difs{diffusions} \def\mex{mixed exponential jumps }
+\newcommand{\p}{{\rm I \!P}} \def\sp{spectrally positive } \def\dif{diffusion}
+ \newcommand{\md}{\mathrm d}  \def\mI{\mathcal I} \def\divs{dividends }
+\newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
+\newcommand{\blue}{\textcolor[rgb]{0.00,0.00,1.00}}
+\newcommand{\green}{\textcolor[rgb]{0.00,1.00,0.00}}
+\newcommand{\W}[2]{\ensuremath{W^{(#1)}(#2)}}
+\newcommand{\dW}[2]{\ensuremath{W^{(#1)\prime}(#2)}}
+%\newcommand{\Z}[2]{\ensuremath{Z^{(#1)}(#2)}}
+%\newcommand{\dZ}[2]{\ensuremath{Z^{(#1)\prime}(#2)}}
+\newcommand{\ddZ}[2]{\ensuremath{Z^{(#1)\prime\prime}(#2)}}
+\def\TV{\tilde{V}_q(0)} \def\Beta{\mathfrak B}
+\def\Ezz{\E^{[0[}} \def\Ezb{\E^{[0,b]}} \def\Pzb{P^{[0,b]}}
+   \def\Eazr{\E^{|0,b[}} \def\Eazb{\E^{|0,b]}} \def\sd{scale derivative }
+   \def\Vb{V^{b]}} \def\Vkb{V_k^{b}} \def\Vr{V^{b[}} \def\Vzr{V^{[0,b[}}
+   \def\Vzz{V^{[0[}} \def\Vzb{V^{[0,b]}} \def\Thr{Therefore, }
+   \def\Fr{Furthermore, } \def\frt{furthermore } \def\app{approximation}\def\woF{\widehat{\overline{\lm}}}
+   \def\Vazr{V^{|0,b[}} \def\iffa{} \def\Xt{(X_t)_{t \geq 0}} \def\mZ{{\mathcal Z}} \def\mA{\mathcal A} \def\mB{\mathcal B} \def\mC{\mathcal C} \def\mU{\mathcal U} \def\mI{\mathcal I} \def\ubd{unbounded variation case} \def\mR{\mathcal R}
+\def\bd{bounded variation case} \def\div{dividend} \def\rd{reserves-dependent } \def\val{value function}\def\Pd{Pad\'e approximation } \def\Pds{Pad\'e approximations}\def\tPd{two point Pad\'e approximation} \def\pcs{particular cases of } \def\pc{particular case of }
+   \def\cmy{complete monotonicity } \def\Lm{L\'evy measure }\newcommand{\eps}{\varepsilon} \def\wkt{well-known and easy to check that } \def\expoc{exponential claims}
+   \def\Mp{More precisely, } \def\sats{satisfies} \def\form{formula } \def\sat{satisfy} \def\fun{function } \def\expl{explicit } \def\funs{functions} \def\thr{therefore } \def\wf{we find that } \def\inc{increasing} \def\resp{respectively} \def\proc{process} \def\eq{equation} \def\eqs{equations} \def\cd{(\cdot)} \def\sat{satisfy} \def\ci{capital injections} \def\C{C} \def\D{D} \def\tRui{| \Rui} \def\uph{\red{UP TO HERE}}
+\def\abs{absolute } \def\part{\partial } \def\tx{T_{x,+}}  \def\te{T_{\e,+}} \def\iLT{inverse Laplace transform  }\def\bep{\begin{pmatrix}} \def\eep{\end{pmatrix}}
+   \def\ito{it turns out that } \def\bcons{boundary conditions} \def\bcon{boundary condition } \def\SL{Sturm Liouville } \def\wrt{with respect to }\def\rmi{\rho_{-}} \def\rpl{\rho_{+}}
+   \def\nny{nonnegativity } \def\wth{with respect to } \def\abr{absolute ruin } \def\PHj{phase-type jumps} \def\tZ{\;{^| Z}} \def\tW{\;{^| W}} \def\tRui{\;{^| \Rui}} \def\inth{in the case of } \def\c{c} \def\ctr{control } \def\eddc{expected discounted dividends minus capital injections}\def\coe{coefficient} \def\per{perturbed } \def\Ito{It turns out that }\def\std{state dependent } \def\Marp{Markov process} \def\saty{satisfy } \def\wft{we find that }\def\LTW{Laguerre-Tricomi-Weeks}\def\TW{W^{(\Fq)}_0} \def\FT{fixed Talbot algorithm }\def\ET{Esscher transform}\def\WF{W^{(\Fq)}}
+   \def\ratap{rational approximation}
+   \def\Dis{\mathfrak D} \def\Mar{Markov }\def\fac{factorization} \def\DW{\Delta^{(W)}_\q} \def\DZ{\Delta^{(Z)}_\q} \def\CLp{\CL process  } \def\form{formula} \def\fno{from now on} \def\upc{up to a constant} \def\snl{\sn \lev \procs } \def\expoj{exponential jumps} \def\prc{proportionality constant} \def\Itt{It turns out that }\def\snL{spectrally negative L\'evy processes} \def\wr{with respect to }\def\Tse{This is equivalent to }\def\LZa{Lokka-Zervos alternative}\def\GSf{\GS function}\def\sta{standard }\def\deV{de Vylder approximation}\def\wmh{we must have }\def\Ite{It is enough to analyze }
+   \def\Tse{This is equivalent to }\def\elts{elements }\def\capi{capital injections}\def\edd{expected discounted dividends }\def\obj{objective} \def\ti{\times } \def\tc{T_{c,+}} \def\tbm{T_{b,-}}\def\Nt{Note that }
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}%//.//
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\pr}[1]{\left(#1\right)} %(.)
+\providecommand{\pp}[1]{\left[#1\right]} %[.]
+\providecommand{\set}[1]{\left\lbrace#1\right\rbrace} %{.}
+\providecommand{\scal}[1]{\left\langle#1\right\rangle}%<.>
+\newcommand*{\loc}{{\mathrm{loc}}} \def\DZW{\Delta^{(ZW)}}
+\def\DWWp{\Delta^{(WW')}} \def\si{\fr{\s^2}2}\def\fsa{follows by simple algebra}\def\re{\textcolor{red}}\def\mA{\mathcal A} \def\mB{\mathcal B} \def\mC{\mathcal C} \def\mD{\mathcal D}\def\gf{generating function}
+\def\Prop{Proposition } \def\hyp{hypergeometric }\def\corr{corresponding }
+\def\cmy{complete monotonicity} \def\cm{completely monotone}\def\ms{must satisfy}\def\Fe{For example, }\def\Itm{It may be checked that }
+\newcommand{\figu}[3]{
+\begin{figure}[!h]
+%\scalebox{#3}
+\begin{center}
+{\includegraphics[width=13 cm, height=8 cm]{#1}}
+\end{center}
+\vspace{-0.2cm}
+\caption{\hspace{0.25cm}#2\label{f:#1}}
+\end{figure}
+}
+
+
+
+
+\begin{document}
+\title{Optimizing dividends and limited capital injections. A practical solution for the  Cram\'er-Lundberg process, via de Vylder-type   approximations %Which ``de Vylder"   approximation?
+}
+%\title{Are the  ``de Vylder-type" and Pad\'e  approximations   efficient for optimizing dividends for the \CL process?}
+\author{F. Avram, D. Goreac, R. Adenane, U. Solon, S. Zhu
+}
+\maketitle
+\begin{abstract}
+We investigated recently in \cite{AGLW} the  control problem  of  optimizing dividends in a Cramér-Lundberg model  in which capital injections are allowed at a certain cost.
+We proved there the optimality,  with exponential jumps, of bounded buffer  $(-a,0,b)$ policies, which
+consist in allowing capital injections smaller than a given $a^*$ and declaring bankruptcy at the first time when the size of the overshoot below 0 exceeds $a^*,$ and only pay dividends when the reserve reaches an upper barrier $b^*$.
+$a^*,b^*$ are determined via simple formulas expressed in terms os the scale functions
+$W_q,Z_q$.
+ Since generalizing to general claims seems  rather daunting, we decided   to   experiment below numerically  with  applying our formulas (incorrectly) to the general case.  While of course, un-optimal, the results show typically improvements of around $33 \%$ \wrt to the previous literature (the \deF and \SLG\ solutions).
+
+ This approach is very similar in spirit with the de Vylder-type approximations, which consist essentially in
+replacing the inverse of the exponential rate $\mu^{-1}$ in our formulas  respectively    by $m_1, $  by $\fr {m_2}{2 m_1}$, or by $\fr {m_3}{3 m_2}$ (more complete descriptions may be obtained by working out some first order Pad\'e approximations).  Since we do not have an exact answer for general claims, studying the accuracy of our four  approximations is impossible.  We can however compare the amount of improvement \wrt  the traditional \deF and \SLG\ objectives (which only optimize  the dividend barrier $b$).
+
+
+\end{abstract}
+\tableofcontents
+
+
+%\input{exaClu}
+\input{exa}
+
+%\input{two}
+
+\small
+\bibliographystyle{amsalpha}
+%\bibliographystyle{plain}
+\bibliography{Pare37}
+
+\end{document}
+
+
+

@@ -1,0 +1,40 @@
+\section{De Vylder approximation}
+
+Computing the ruin probability using the \PK formula is not always straightforward, as the problem of finding an inverse Laplace transform of a given expression is not trivial.
+
+A technique in approximating functions whose Laplace transforms are known involves approximating the Laplace transform by a certain rational expression. The rational expression can then be broken down into partial fractions whose inverse Laplace transform is known.
+
+From the idea that
+\begin{align*}
+\H{\ol{F}}(s) &= \int_{0}^{\infty} \ol{F}(x) e^{-sx} ~dx = \int_{0}^{\infty} \ol{F}(x) \sum_{k=0}^{\infty} \frac{(-sx)^k}{k!} ~dx \\
+& = \sum_{k=0}^{\infty} \frac{(-s)^k}{k!} \int_{0}^{\infty} \ol{F}(x) x^k ~dx = \sum_{k=0}^{\infty} \frac{(-s)^k}{k!} m_{k+1},
+\end{align*}
+we get
+\begin{align*}
+\k(s) &= cs + \frac{\sigma^2 s^2}{2} - \lambda s \H{\ol{F}}(s) = cs + \frac{\sigma^2 s^2}{2} - \lambda s \sum_{k=0}^{\infty} \frac{(-s)^k}{k!} m_{k+1}\\
+&= cs + \frac{\sigma^2 s^2}{2} - \lambda s \left( m_1 - s m_2 +  \frac{s^2}{2} m_3 + \cdots \right)
+\end{align*}
+
+Hence if we approximate $\H{\ol{\Psi}}(s)$ by a rational expression, say $\frac{a}{s+b}$ (where $a$ and $b$ are coefficients to be solved for), we have
+\begin{align*}
+& \H {\Psi}(s) = \frac{1}{s} - \frac{\kappa^{\prime}(0)}{\kappa (s)} = \frac{\kappa (s) - s \kappa^{\prime} (0)}{s \kappa (s)}  \approx \frac{a}{s+b} \\
+\Rightarrow & as \kappa (s) \approx (s+b) \left( \kappa (s) - s \kappa^{\prime} (0) \right) = (s+b) \left( \kappa (s) - s (c- \lambda m_1) \right)
+\end{align*}
+
+Simplifying a term at the right side of the equation leads to 
+\begin{align*}
+\kappa (s) - s (c- \lambda m_1) & = cs + \frac{\sigma^2 s^2}{2} - \lambda s \left( m_1 - s m_2 +  \frac{s^2}{2} m_3 + \cdots \right) -cs + s\lambda m_1\\
+& = \frac{\sigma^2 s^2}{2} + \lambda s^2 m_2 - \lambda \frac{s^3}{2} m_3 + \cdots
+\end{align*}
+which implies
+\[
+as left( cs + \frac{\sigma^2 s^2}{2} - \lambda s \left( m_1 - s m_2 + \cdots \right) right) \approx (s+b) \left( \frac{\sigma^2 s^2}{2} + \lambda s^2 m_2 - \lambda \frac{s^3}{2} m_3 + \cdots \right)
+\]
+\[
+\Rightarrow a \left( c + \frac{\sigma^2 s}{2} - \lambda \left( m_1 - s m_2 + \cdots \right) \right) \approx (s+b) \left( \frac{\sigma^2}{2} + \lambda m_2 - \lambda \frac{s}{2} m_3 + \cdots \right).
+\]
+
+One can solve for the coefficients $a$ and $b$ by truncating the sums and comparing the coefficients of the first few powers of $s$, which gives us the system
+\[
+a
+\]

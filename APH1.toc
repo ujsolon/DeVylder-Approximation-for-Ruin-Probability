@@ -1,0 +1,1 @@
+\contentsline {section}{\numberline {1}Examples of scale computations for Cram\'er-Lundberg \ models }{1}{section.1}

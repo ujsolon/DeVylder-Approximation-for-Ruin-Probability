@@ -1,0 +1,387 @@
+\section{Examples of scale computations for \CL \ models \la{ex:1}}
+
+In this section, examples along with numerical simulations will be presented. Starting with the case of a \CL\ model with exponential mixtures jumps of order three, we plot the graphs \re{of $W_q$, and also of $W'_q$, $W''_q$, when they exhibit oscillations, and determine the "winning approximation".}
+
+\re{\Ito the best approximation is ...}
+
+In the \textit{example \eqr{NH5}}, we try to see what happens in the case of order five of a non-hyperexponential jump density. Finally drawing upon the BUtools package, we deal with a \CL\ model with a non phase-type jump density.\re{was  that checked?}
+
+
+\beXa
+Consider a Cram\'{e}r-Lundberg process with density function
+$\frac{150}{83} e^{-3 x}+ \frac{42}{83} e^{-2 x} + \frac{12 }{83} e^{-x}$, and $c=1$,  $\l=\frac{83}{48}$, $\th=\fr{263}{235}$, $q=\fr{5}{48}$, $p= \fr{263}{498}$.
+The Laplace exponent of this process is
+$\kappa(s) = s - \frac{12 s}{83 (s+1)}-\frac{21 s}{83 (s+2)}-\frac{50 s}{83 (s+3)}$ and from this one can (numerically) invert $\frac{1}{\kappa(s) - q} =  \H{W}_q(s)$ to obtain the scale function
+
+\iffalse
+\fn[4]{This was produced by taking
+$\Fq=\frac{1}{3}, c=1$ and
+a negative Wiener-Hopf factor
+$$\f_-(s)=\frac{\left(\frac{s}{3}+1\right) \left(\frac{s}{2}+1\right) (s+1)}{\left(\frac{2 s}{5}+1\right) \left(\frac{2 s}{3}+1\right) (2
+   s+1)}$$
+   with poles $-\fr 1 2, -\fr 3 2, -\fr 5 2$.}
+\fi
+
+\bea
+W_q(x)  &= -0.0813294 e^{(-2.60997 x)} - 0.179472 e^{(-1.68854 x)} \\ &- 0.373887 e^{(-0.779311 x)}  + 1.63469 e^{(0.18198 x)}.
+\eea
+
+
+From here one can obtain the dominant exponent $\Phi_q = 0.18198$, and since the minimum of $W_q'$ is at $b^*=1.89732$, we conclude that this is the optimal barrier that would maximize dividends.
+
+Continuing, from the parameters of the process, one can obtain the approximations to the scale function $W_q$ as described in the earlier section. Table \ref{table:sample1} gives a summary of the values of $\Phi_q$ and $b^*$ obtained from these approximations, as well as the each one's percent deviation from the exact value. Figure \ref{fig:sample1} shows the plots of $W_q$ as well as its first two derivatives.
+
+From table \ref{table:sample1}, we can observe a percent relative error of less than $2\%$ for each of the approximations' $\Phi_q$ value, with the DeVylder approximation's $\Phi_q$ beating the others. Considering the optimal barrier $b^*$ obtained from each, we observe only the DeVylder approximation's $b^*$ to have a percent relative error of less than $7 \%$.
+
+
+\begin{table} 
+\begin{tabular}{|l|l|l|l|l|} 
+\hline
+       & \begin{tabular}[c]{@{}l@{}}Dominant   exponent \\ $\Phi_q$\end{tabular} & \begin{tabular}[c]{@{}l@{}}Percent   relative error\\ ($\Phi_q$)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Optimal barrier\\ $b^*$\end{tabular} & \begin{tabular}[c]{@{}l@{}}Percent   relative error\\ ($b^*$)\end{tabular} \\ \hline
+Exact  & 0.18198                                                               & 0                                                                           & 1.89732                                                      & 0                                                                       \\ \hline
+Expo   & 0.184095                                                              & 1.162215628                                                                 & 2.04608                                                      & 7.840532962                                                             \\ \hline
+Dev    & 0.182011                                                              & 0.017034839                                                                 & 1.91233                                                      & 0.79111589                                                              \\ \hline
+Renyi  & 0.181708                                                              & 0.149466974                                                                 & 2.08136                                                      & 9.699997892                                                             \\ \hline
+LapDev & 0.178939                                                              & 1.671062754                                                                 & 2.04661                                                      & 7.868467101                                                             \\ \hline
+\end{tabular}
+\caption{Example 1: Values of $\Phi_q$ and $b^*$ obtained from the approximations and percent relative error when compared to the exact value}
+\label{table:sample1}
+\end{table}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Wsample1}
+        \caption{$W_q(x)$}
+        \label{fig:Wsample1}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{W1sample1}
+        \caption{$W'_q(x)$}
+        \label{fig:W1sample1}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+    \\
+    \begin{subfigure}[b]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{W2sample1}
+        \caption{$W''_q(x)$}
+        \label{fig:W2sample1}
+    \end{subfigure}
+    \caption{Example 1: Plots of $W_q(x)$, $W'_q(x)$, and $W''_q(x)$ of the exact solution and the approximations}\label{fig:sample1}
+\end{figure}
+
+
+
+\iffalse
+
+The approximation for the \rp\ was already given in Figure \ref{f:MEp1}. The dominant exponents of Renyi and de Vylder are $0.174908, 0.175181$, very close, but a bit smaller than the real $\Fq=0.18198$.
+
+\figu{Wa}{The  Renyi approximation and classic  DeVylder are practically indistinguishable for large $x$
+of the exact formula of $W_q(x)$, for $f(x)=\frac{12}{83 }e^{-x}+\frac{42}{83} e^{-2 x}+\frac{150}{83}e^{-3x}$. The   DeVylder-Laplace is rather poor, and so is the naive approximation; overfitting at $0$ seems a bad idea.}{.3}
+
+In  figure \ref{f:Wa}, we draw the exact \sf\ $W_q(x)$, together with the \deV-type and
+Renyi    approximations. The figure suggests that the  \re{Renyi \app\ is a lower bound, and that the classic de-Vylder approximation is  the best}. This is investigated in further examples the next section.
+
+As seen in  figure \ref{f:?}   the exact optimal barrier is $b^*=0.866289$, and the Renyi and \re{classic de-Vylder} optimal barriers are \re{$b_R= 0.656067$, ...} 
+\fi
+
+\eeXa
+
+
+\beXa \la{NH5}
+Consider the Cram\'{e}r-Lundberg process with density of claims $f(x)=\frac{5}{2 }e^{-5x}+\frac{4}{5} e^{-4 x}-\frac{1}{5}e^{-3x}- \frac{1}{5}e^{-2x}+ \frac{1}{20}e^{-x}$
+and $c=\frac{23}{90}$,   $q=\frac{1}{10}$.
+
+One can solve for the other parameters of the process yielding $\l=\frac{7}{12}$, $\th= 1$, $p=23/180$, $\rho = \frac{1}{2}$. The Laplace exponent of this process is $ \kappa(s) = \frac{23 s}{90} -\frac{s}{20 (s+1)}+\frac{s}{10 (s+2)}+\frac{s}{15 (s+3)}-\frac{s}{5 (s+4)}-\frac{s}{2 (s+5)}$ and from here the scale function is
+\bea
+W_q(x) & = -0.0831561\  e^{(-4.35135 x)} + 0.684818\  e^{(-2.65126 x)} - 0.595164\ e^{(-0.837877 x)} + 6.02604\  e^{(0.666084 x)} \\ & - 2.11949\  e^{(-2.57585 x)} \cos[0.811233 x]  + 2.39748 \  e^{(-2.57585 x)} \sin[0.811233 x]
+\eea
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+       & \begin{tabular}[c]{@{}l@{}}Dominant   exponent \\ Phi\_q\end{tabular} & \begin{tabular}[c]{@{}l@{}}Percent   relative error\\ (Phi\_q)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Optimal barrier\\ b*\end{tabular} & \begin{tabular}[c]{@{}l@{}}Percent   relative error\\ (b*)\end{tabular} \\ \hline
+Exact  & 0.666084                                                              & 0                                                                           & 0.538                                                        & 0                                                                       \\ \hline
+Expo   & 0.691616                                                              & 3.833150173                                                                 & 0.506947                                                     & 5.771933086                                                             \\ \hline
+Dev    & 0.670061                                                              & 0.597071841                                                                 & 0.834488                                                     & 55.10929368                                                             \\ \hline
+Renyi  & 0.650448                                                              & 2.347451673                                                                 & 0.260532                                                     & 51.5739777                                                              \\ \hline
+LapDev & 0.587976                                                              & 11.72644892                                                                 & 0.655954                                                     & 21.92453532                                                             \\ \hline
+\end{tabular}
+\caption{Example 2: Values of $\Phi_q$ and $b^*$ obtained from the approximations and percent relative error when compared to the exact value}
+\label{table:sample2}
+\end{table}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Wsample2}
+        \caption{$W_q(x)$}
+        \label{fig:Wsample2}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{W1sample2}
+        \caption{$W'_q(x)$}
+        \label{fig:W1sample2}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+    \\
+    \begin{subfigure}[b]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{W2sample2}
+        \caption{$W''_q(x)$}
+        \label{fig:W2sample2}
+    \end{subfigure}
+    \caption{Example 2: Plots of $W_q(x)$, $W'_q(x)$, and $W''_q(x)$ of the exact solution and the approximations}\label{fig:sample2}
+\end{figure}
+
+The approximations for  $W_q(x)$ give again  Renyi and classic \deV as champions.
+The dominant exponents of the Renyi and \deV s are $0.650448$, $0.670061$, one below and one above    the real $\Fq=0.666084$. This suggests that the average of the two approximations would improve on both of them.
+
+\iffalse
+\figu{W2}{}{}
+\fi
+
+
+    The exact optimal barrier is $b^*=0.538,$ the Renyi optimal barrier is $b_R= 0.260532$, and the relative error is $0.515739$.
+    Both $W_q''$ and its \app\ are increasing \funs.
+
+    --see \cite{johnson1989matching} for more hardest types of approximations; therein the case of mixture of Erlang distributions of sufficiently high common order was investigated.
+
+
+
+\eeXa
+
+
+
+\beXa
+
+In The following example, we take a Cram\'{e}r-Lundberg process with
+\bea c=\frac{7}{18},  \l=\frac{47}{60}, \th= 1\eea
+and non-hyperexponential density of claims $f(x)=\frac{5}{2 }e^{-5x}+\frac{4}{5} e^{-4 x}+\frac{1}{5}e^{-3x}- \frac{1}{5}e^{-2x}+ \frac{1}{20}e^{-x}$.
+
+The   scale function is %for the process  in Example \ref{ex1} is
+  \bea
+  \begin{aligned}
+&  W_\q(x)  =  -0.083013\ 2.71828^{(-4.45457 x)} - 0.193651\ 2.71828^{(-3.43626 x)} -
+ 0.459603\ 2.71828^{(-0.855781 x)} \\
+  & + 4.15668\ 2.71828^{(0.454369 x)} -  0.84898\ 2.71828^{(-2.21816 x)} \cos[0.513884 x] + 1.24626\ 2.71828^{(-2.21816 x)} \sin[0.513884 x]
+\end{aligned}
+  \eea
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+       & \begin{tabular}[c]{@{}l@{}}Dominant   exponent \\ Phi\_q\end{tabular} & \begin{tabular}[c]{@{}l@{}}Percent   relative error\\ (Phi\_q)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Optimal barrier\\ b*\end{tabular} & \begin{tabular}[c]{@{}l@{}}Percent   relative error\\ (b*)\end{tabular} \\ \hline
+Exact  & 0.420145                                                              & 0                                                                           & 0.797999                                                     & 0                                                                       \\ \hline
+Expo   & 0.429586                                                              & 2.247081365                                                                 & 0.857445                                                     & 7.449382769                                                             \\ \hline
+Dev    & 0.420885                                                              & 0.17612967                                                                  & 0.0686674                                                    & 91.39505187                                                             \\ \hline
+Renyi  & 0.416601                                                              & 0.843518309                                                                 & 0.794273                                                     & 0.466917878                                                             \\ \hline
+LapDev & 0.392412                                                              & 6.600816385                                                                 & 0.271363                                                     & 65.99456892                                                             \\ \hline
+\end{tabular}
+\caption{Example 3: Values of $\Phi_q$ and $b^*$ obtained from the approximations and percent relative error when compared to the exact value}
+\label{table:sample3}
+\end{table}
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Wsample3}
+        \caption{$W_q(x)$}
+        \label{fig:Wsample3}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{W1sample3}
+        \caption{$W'_q(x)$}
+        \label{fig:W1sample3}
+    \end{subfigure}
+    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
+    %(or a blank line to force the subfigure onto a new line)
+    \\
+    \begin{subfigure}[b]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{W2sample3}
+        \caption{$W''_q(x)$}
+        \label{fig:W2sample3}
+    \end{subfigure}
+    \caption{Example 3: Plots of $W_q(x)$, $W'_q(x)$, and $W''_q(x)$ of the exact solution and the approximations}\label{fig:sample1}
+\end{figure}
+
+In this case, the approximations for  $W_q(x)$ give Renyi as winner.
+The dominant exponents of the Renyi and \deV s are $0.44982$, $0.455485$, one below and one above    the real $\Fq=0.454369$.
+\iffalse
+\figu{Wa2a}{}{}
+\fi
+
+    The exact optimal barrier is $b^*=0.779653,$ the Renyi optimal barrier is $b_R=0.732339$, and the relative error is $0.060686$.
+    Both $W_q''$ and its \app\ are increasing \funs.
+
+
+\eeXa
+
+
+
+\beXa
+Next we consider a more challenging example from BUTools,   produced by taking
+a Cram\'{e}r-Lundberg process with matrix exponential, non phase-type  density of claims $f(x)=\a e^{A x} (-A) \bff 1, $ where $\a=(-2.4, 0.9 , 2.5),  A = \bep
+   {-6.2, 2, 0}\\
+   {2, -9, 1}\\
+   {1, 0, -3}\eep$
+and $  \th= 1, q=1/10.$
+
+--see \cite{harris1992note} and \cite{reintelek14} for other tricky densities.
+
+
+The   scale function is %for the process  in Example \ref{ex1} is
+  \bea
+  \begin{aligned}
+& -0.0655864 e^{-9.35143 x}+0.149742 e^{-6.89805 x}-0.676982 e^{-1.26245 x}+1.3476 e^{0.142175 x}
+\end{aligned}
+  \eea
+
+\iffalse
+\figu{Wa3a}{}{}
+\fi
+
+ Now $\Fq=0.142175$; the dominant exponent of the classic \deV\ is very close at $ 0.142174$, and the dominant exponent of Renyi, $0.142238$, is also close.
+
+
+
+
+    The exact optimal barrier is $b^*=2.61925$,   the Renyi optimal barrier is $b^*= 2.59638$, and the relative error is $0.00873044$. For classic \deV\,
+    the relative error is $0.00609153$.
+
+    However,  we may have a surprise in  examples where $b^*$ is not the unique root of $W_q''(x)$, and we may be faced with the Azcue-Muller-Loeffen phenomenon.
+
+\iffalse    
+    \figu{pl3}{When $W_q''(x)$  exhibits oscillations, exponential approximations are bound to fail in certain regions. In our example, the minimum of $W'_q$ is still unique; otherwise, one may need to resort to higher order  Pad\'e and  Laguerre  approximations. Producing examples where $W_q''(x)$   exhibits more than   three roots
+and investigating the convergence of the roots of our Pad\'e approximations  seem both  hard problems.}{}
+\fi
+\eeXa
+
+\iffalse
+\beXa
+Inspired by the density given in \cite{harris1992note}, we take in the following example a \CL \ process with
+$$ \th = \frac{48}{55}, \quad \mbox{and}\ \l =1$$
+with non-hyperexponential density of claims given by
+$ f(x)= 3 e^{-x} - 6 e^{- 2x} +3 e^{- 3x}$
+the scale function is :
+ \bea \begin{aligned} & W_q (x) = -0.280452\ 2.71828^{(-0.421202 x)} + 0.540968\ 2.71828^{(0.0578629 x)} +
+ 0.0307461\ 2.71828^{(-2.65814 x)} \cos[0.323643 x] \\
+  &+ 0.0791481\ 2.71828^{(-2.65814 x)} \sin[0.323643 x] \end{aligned} \eea
+
+Similar to the previous example of a non-phase-type density, the approximation of $W_q$ give the classic DeVylder approximation as winner.
+ \figu{wa4}{}{}
+
+ The exact optimal barrier is  $b^*=6.9158 $,   the Renyi optimal barrier is $b_R= 6.79333$, and the relative error is $9.46103$.
+ $\Phi_q = 0.0578629$; The dominant exponents of the Renyi is close at $0.0578967$ and the dominant exponent of the classic DeVylder is very close at $0.0578619.$
+
+\figu{wsec4}{}{}
+
+\eeXa
+
+
+\beXa
+We take advantage of the example presented in \cite{reintelek14}; now by taking
+a Cram\'{e}r-Lundberg process with matrix exponential, non phase-type  density of claims $f(x)=\a e^{A x} (-A) \bff 1, $ where $\a=(3.99334, -5.99002, 4.32612, -1.99667, 0.667221),  A = \bep
+   {-1, 1, 0, 0, 0}\\
+ {0, -1, 1, 0, 0}\\
+ {0, 0, -1, 1, 0}\\
+ {0, 0, 0, -1, 1}\\
+ {0, 0, 0, 0, -1}
+\eep$ and $  \th= 1, q=1/10$.
+\figu{wPH}{}{}
+
+In this case the classic DeVylder approximation is the champion.
+
+\figu{wPH2}{}{}
+
+Now $\Phi_q = 0.016699$;  the dominant exponent of the classic \deV\ is very close at $ 0.0166987$, and the dominant exponent of Renyi, $0.0167116$, is also close.
+
+
+
+ The exact optimal barrier is $b^*=21.7388 $,   the Renyi optimal barrier is $b_R= 21.7041$, and the relative error is $0.00159435 $.
+\eeXa
+
+
+\beXa
+Another very interesting example, also inspired from \cite{reintelek14}, but this time
+we take a Cram\'{e}r-Lundberg process with matrix exponential, non phase-type  density of claims $f(x)=\a e^{A x} (-A) \bff 1, $ where $\a=(1, -0.7, 0.7),  A = \bep
+ {-2, 2, 0}\\
+ {0, -5, 5}\\
+ {0, 0, -9}
+\eep$ and $  \th= 1, q=1/10$.
+\figu{wPH0}{}{}
+ Here the classic \deV\ approximation is also the winner.
+
+
+
+Now $\Phi_q =0.137583 $;  the dominant exponent of the classic \deV\ is very close at $ 0.137579$, and the dominant exponent of Renyi, $0.137688$, is also close.
+\figu{wPH1}{}{}
+
+
+
+ The exact optimal barrier is $b^*=2.91429  $,   the Renyi optimal barrier is $b_R= 2.81849 $, and the relative error is $ 0.0328731  $.
+
+
+ Note that the Exact $W'$ diverge from the plot of the classic Renyi, \figu{wRn}{}{}
+
+ and so as in the plot of the Naive approximation of $W$ and the Exact $W''$. \figu{wNa}{}{}
+
+\eeXa
+
+\beXa
+In the following example, for a Cram\'er Lundberg model we take the hyperexpoential density of claims given in \cite{avram2011moments} by  $f(x)= \frac{315}{12 }e^{-5x}+\frac{7}{8} e^{-4 x}+\frac{27}{64}e^{-3x}+ \frac{3}{16}e^{-2x}+ \frac{7}{128}e^{-x}$, with $\th = \frac{48}{55}$;
+
+
+The scale function is
+
+\bea \begin{aligned}
+& W_q (x)= -0.00493814\ 2.71828^{(-4.07091 x)} - 0.0558297\ 2.71828^{(-3.19893 x)} -
+ 0.196449\ 2.71828^{(-2.54279 x)}\\
+ & - 0.123323\ 2.71828^{(-1.83918 x) }- 0.0646808\ 2.71828^{(-0.941267 x)} + 0.87134\ 2.71828^{(0.0892008 x)} \end{aligned}\eea
+\figu{wAv}{}{}
+
+We notice again that the classic DeVylder is the winner.
+
+
+And here $\Phi_q = 0.0892008$; the dominant exponent of the classic \deV\ is very close at $ 0.0892021$, and the dominant exponent of Renyi, $0.0891807$, is also close.
+\figu{wAv0}{}{}
+
+
+The exact optimal barrier is $b^*=2.70201 $,   the Renyi optimal barrier is $b_R= 2.74935 $, and the relative error is $0.0175198  $.
+
+
+\eeXa
+
+\fi
+
+    \iffalse
+
+
+    {\bf The Pad\'e Tijms \app \ is $b^*=0.876898$}.
+    %
+The input to the \LTW \ inversion is
+     \[ \H G (s)=\frac{216 \left(261 s^2+1155 s+1202\right)}{187 (6 s+5) (6 s+11) (6 s+17)},\]
+the  Pad\'e approximation of order $(0,1)$ is $\frac{312077664}{187 (1278399 s+1123870)}$,  the Laguerre exponent is $\alpha/2=0.879123$, and the largest error with $n=40$ is $4 \times 10^{-14}$ -- see Figure \ref{f:err3}.
+\figu{err3}{Relative errors of the \LTW \ inversion with mixed exponential claims of order $3$}{}
+
+Again, the exponent  $\alpha/2=\fr{ 6 \k'(\Fq) \k''(\Fq)}{3 (\k''(\Fq))^2- \k'(\Fq) \k'''(\Fq)}=1.138$ does better,  with the largest error  with $n=40$ of $6 \times 10^{-16}$.  This suggests the importance of optimizing $\a$, which is a  difficult problem \cite{giunta1989more,weideman1999algorithms}.  Recall however our proposal  to circumvent it by starting with a
+higher order \Pd \ of $G(s)$ -- see \eqref{MG}.
+ Another reasonable choice is the ``true dominant exponent  $\alpha/2=5/6$ which is unknown in real life, and yields a larger error $3 \times  10^{-15}$ (with $n=50$). The exponent of the new  formula \eqref{al} is $\alpha/2=0.77$, and the  error with $n=50$ is $3 \times 10^{-14}$, even larger.
+%\fi
+In  the figure \ref{f:MEp2}, we draw the exact $W_q$, together with its six   approximations.
+\fi
+\iffalse
+
+
+ \figu{}{\label{Erl(2)} Approximations of the scale function pour sinistres Erlang(2,2), $\r=.84$ en gras pointill\'e, avec Tijms tr\`es proche dessous. L'approx. exponentielle en bas est la pire. De Vylder (pointill\'e) et Renyi sont tr\`es proches pour $u>3$, et leur moyenne fait encore mieux pour $u<3$.}
+{0.7}
+\fi

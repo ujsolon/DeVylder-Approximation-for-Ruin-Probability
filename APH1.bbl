@@ -1,0 +1,24 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{AGLW20}
+
+\bibitem[AGLW20]{AGLW}
+F.~Avram, D.~Goreac, J~Li, and X~Wu, \emph{Equity cost induced dichotomy for
+  optimal dividends in the cramér-lundberg model}, IME (2020).
+
+\bibitem[HWR92]{harris1992note}
+C.M. Harris, G.M. William, and F.B. Robert, \emph{A note on generalized
+  hyperexponential distributions}, Stochastic Models \textbf{8} (1992), no.~1,
+  179--191.
+
+\bibitem[JT89]{johnson1989matching}
+M.A. Johnson and M.R. Taaffe, \emph{Matching moments to phase distributions:
+  Mixtures of erlang distributions of common order}, Stochastic Models
+  \textbf{5} (1989), no.~4, 711--743.
+
+\end{thebibliography}

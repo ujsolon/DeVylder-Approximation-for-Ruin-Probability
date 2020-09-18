@@ -1,0 +1,123 @@
+
+
+
+
+\ssec{Pad\'e approximations of the scale functions $W_q, Z_q, q >0$ \la{s:DVW}}
+
+
+
+
+Our goal in this section is to investigate whether the approximations described previously
+ are precise enough to yield reasonable estimates for quantities important in control like $ W''_\q(0) $ and the global minimum   of $ W'_\q(\cdot)$, which yields (typically) the \deF\ optimal dividends barrier $b_{DeF}$.  Note that other \perf\ measures like the dual optimal dividends barrier, and the reflected optimal dividends barrier could be investigated as well. 
+
+ Most of our approximations may be obtained by plugging appropriate values  in  the exact formula \eqr{Wexp} for $W_q$, for  the \CLp\ with \expoc. We will call them {\bf process approximations}, and we have encountered already three:
+ \BEN \im   the naive, \im the Renyi, and
+  \im the  de Vylder \expo\ approximating processes. \EEN
+     They yield each an \app, simply  by plugging in the exact exponential formula \eqr{Wex} with $\s=0$ the appropriate  \paras.
+ \beXa
+  {\bf The Cram\'{e}r-Lundberg model with exponential jumps \la{s:exp}}
+Consider  the Cram\'{e}r-Lundberg model
+ with exponential jump sizes with mean $1/\mu$, jump
+rate $\lambda$, premium rate $c>0$,
+and Laplace exponent
+$\k(s)=s \le(c-\fr{\lambda}{\mu+s}\ri)$, assuming $\k'(0) = c- \fr{\lambda} {\mu} > 0$. Let $\g=\mu - \l/c$ denote the adjustment coefficient, and let $\r=\fr \l{c \mu}$. Solving $\k(s)-\q=0 \Eq c s^2 + s(c \mu -\l -\q) - \q \mu=0$ for $s$ yields two distinct solutions $\g_{2} \leq 0 \leq \g_{1}=\Fq$ given by
+\begin{align*}
+\g_{1} =& \fr{1}{2c} \left(- \left(\mu c -\lambda - \q\right) + \sqrt{\left(\mu c -\lambda - \q \right)^2 + 4\mu \q c} \right),\\
+\g_{2} =& \fr{1}{2c} \left(- \left(\mu c -\lambda - \q\right) - \sqrt{\left(\mu c -\lambda - \q \right)^2 + 4\mu \q c} \right).
+\end{align*}
+
+
+The $W$ scale function is:
+\be \la{Wexp}  W_{\q}(x) = \fr{A_1 e^{\g_{1}x} - A_2 e^{\g_{2}x}}{c(\g_{1}-\g_{2})}  \Eq \H W_{\q}(s) = \fr{s+ \mu}{c s^2 + s(c \mu -\l -\q) - \q \mu},\ee
+where $A_{1} = \mu + \g_{1}, A_{2} = \mu + \g_{2}$.
+
+Furthermore, it is \wkt    the function $ W_{\q}'(x)$ is in this case
+unimodal  with global minimum at
+\be \la{ob} b_{DeF} = \frac{1}{\g_{1} - \g_{2}}
+\begin{cases}\log
+\frac{(\g_{2})^2 A_{2}}{(\g_{1})^2 A_{1}}=\log
+\frac{(\g_{2})^2(\mu +\g_{2})}{(\g_{1})^2(\mu +\g_{1})} \quad &\text{if $ W_{\q}''(0) <  0 \Eq (\q+\lambda)^2$}-
+c\lambda\mu < 0\\ 0 & \text{if $ W_{\q}''(0)\geq 0 \Eq
+(\q+\lambda)^2- c\lambda\mu \geq 0$}\end{cases}, \ee since
+$ W_{\q}''(0) =
+\fr{(\g_{1})^2(\mu +\g_{1})-(\g_{2})^2(\mu +\g_{2})}{c(\g_{1}-\g_{2})}
+=\fr{ (\q+\lambda)^2- c\lambda\mu}{c^3}$ and that the optimal strategy for the \deF \prob \ is
+ the barrier strategy at level $b_{DeF}$ \cite{APP}.
+\iffalse
+ Also, the optimal barriers in the presence of a final penalty $P$, and of reflection with proportional costs $k$, \saty \resp
+ \be \bc P  \q \Delta_\q^{(W)}(b_P)=-W_\q''(b_P)\Eq P  \q \mu \Tl c^{-2}
+     e^{(\Tl + \Tq -\mu) b_P}=-W_\q''(b_P) \\k \Delta_\q^{(ZW)}(b_k)=W_\q'(b_k) \Eq k \Tl c^{-2}
+     e^{(\Tl + \Tq -\mu) b_k}=W_\q'(b_k)
+  \ec. \ee
+\fi
+\eeXa
+
+
+
+
+
+
+
+
+We may  also attempt to use  \Pds, or  two-point Pad\'e approximations  of the \LT\ of $W_q$,  which incorporate into the \Pd\  the following initial values (these can be
+derived easily via the initial value theorem, from the \PK \LT):
+\beq \la{W0} &&W_\q(0)=  \lim_{s \to \I}s \H W_\q(s)= \frac 1 {\c}, \\&&
+W_\q'(0)= \lim_{s \to \I}s\left( \fr{s}{\k(s) -\q}- W_{\q} (0) \right)=   \frac {\q + \l} {\c^2}. \la{W0p}\eeq
+
+Furthermore, when  the jump distribution has a density  $f$, \ith:\fn[6]{This equation is important in establishing the nonnegativity of the optimal dividends barrier.}
+\begin{equation} \label{e:secder}
+\begin{aligned}
+ W_{\q}'' (0_+) &=\lim_{s \to \I} s \left( s \left(\fr{s}{\k(s) -\q}- W_{\q} (0)\right) -  W_{\q}' (0_+) \right)=    \fr 1 c \Big( (\fr {\lambda+ \q }  c )^2 - \fr {\lambda}  c f(0) \Big).
+\end{aligned}
+\end{equation}
+
+
+Further derivatives at $0$ could be computed, but we  stop at order $2$, since  $W_\q''(0)$ already requires estimating $f_C(0)$, which is a rather delicate task starting from real data.
+
+ We  recall below three types of two-point \Pds\ \cite[Prop. 1]{AHPS}, and particularize them to the case when the denominator degree is $n=2$ (which are studied further below). \red{Note that the first two are of the type we saw in Example 1}.
+
+\beP \la{p:deV} \cite[Prop. 1]{AHPS} {\bf Three \red{matrix exponential} approximations for the scale function}.
+\BEN \im To secure both the values of $W_\q(0)$ and $W_\q'(0)$, take into account \eqr{W0} and \eqr{W0p}, i.e. use the \Pd  $$\H W_\q(s) \sim \fr{\sum_{i=0}^{n-1} a_i s^i}{c s^n+ \sum_{i=0}^{n-1} b_i s^i}, a_{n-1}=1, b_{n-1}=c a_{n-2}-\l -\q.$$
+This yields the naive approximation  $\mu \to \fr 1{m_1}$
+\be \la{W2zz} \H W_\q(s) \sim
+   \frac{\frac{1}{m_1}+s}{c s^2+ s \left(\frac{c}{m_1}-\lambda
+   -q\right)-\frac{q}{m_1}}.\ee
+
+
+
+
+   \im To ensure $W_\q(0)=\fr 1 c$, we must only impose the behavior  specified in \eqr{W0}, i.e. use the \Pd  $$\H W_\q(s) \sim \fr{\sum_{i=0}^{n-1} a_i s^i}{c s^n+ \sum_{i=0}^{n-1} b_i s^i}, a_{n-1}=1.$$
+For $n=2$, this yields the Renyi approximation  $\mu \to \fr 1{ m_R}, \l -> \lambda \fr{ m_1}{m_R}$,
+\be \la{W2z} \H W_\q(s) \sim\frac{\frac{2 m_1}{m_2}+s}{c s^2 +\frac{s \left(2 c m_1-2
+   \lambda  m_1^2-m_2 q\right)}{m_2}-\frac{2 m_1
+   q}{m_2}}=\frac{\frac 1 {m_R}+s}{c s^2 +{s \left(\fr c {m_R}-
+   \lambda \fr{ m_1}{m_R}- q\right)}-\frac{
+   q}{m_R}},\ee
+   where  $m_R=\frac {m_2}{2 m_1}$ is the first moment of the excess density $f_e(x)$.
+     This is called  DeVylder B)  method in
+    \cite[(5.6-5.7)]{GSS}, and is the \wk\ result   of  fitting the first two cumulants of the risk process.  Note that it equals the \sf\ of a \proc\
+    with  \expoc\ of rate $m_R$ and with    $\l$ modified to \red{ $\l_R=\lambda \fr{ m_1}{m_R}$, and   that, since $c$ is unchanged, the latter equation is equivalent to the conservation of $\rho=\fr{\l m_1}c,$ and to the conservation of $\th$.}
+
+
+ \im The pure \Pd\
+\beq \la{W2} && \H W_\q(s) \sim \frac{ s+\fr{3 m_2}{m_3}}{s^2 \left( c- \l m_1 + \lambda  \fr {3 m_2^2}{2
+   m_3}\right)+s \left( c\fr{3 m_2}{m_3}-\fr{3 m_1 m_2}{m_3} \lambda  - q\right)-\fr{3 m_2}{m_3} q}\no\\&&=
+   \frac{ s+\fr{1}{\H m_3}}{s^2 \left( c -\l m_1 + \T \l_L    \H m_2 \right)
+   +s \left( c \fr{1}{\H m_3}-\Tl_L  - q\right)-\fr{1}{\H m_3} q}, \; \Tl_L=\fr{3 m_1 m_2}{m_3} \lambda=\fr{ m_1 }{\H m_3} \lambda.\eeq
+
+
+
+   Note that the coefficient of $s^2$ in the denominator coincides with the one in the  classic \deV, but the coefficient of $s$ doesn't. Also, $\T \l_L$  is different from the classic \deV\ \para\  $\T \l$ (also called DeVylder (A)   in
+    \cite[(5.2-5.4)]{GSS}).
+
+Finally, comparing with \eqr{Wexp} we see that this \red{cannot be viewed as an "exponential process" approximation}.
+    Indeed, if it were, the first two \paras\ should  be
+    $$\T m= \H m_3, \Tl_L=\fr{3 m_1 m_2}{m_3} \lambda=\fr{ m_1 }{\H m_3} \lambda. $$ Now the coefficient of $s$ imposes preserving $c$, but the coefficient of $s^2$ contradicts this (unless  $\l m_1 =  \tilde{\l}_L  {\H m_2} \Eq 2 m_1 m_3 = 3 m_2^2$.
+
+
+
+\EEN
+\eeP
+\beR  In the case of \expoc,  these three  approximations are exact.
+ Indeed, it suffices to check that for \expoc \ all the normalized moments are equal to $\mu^{-1}$. \eeR
+ We have included a derivation of the less-known ``De Vylder-Laplace" third approximation in Section \ref{s:LdV}.

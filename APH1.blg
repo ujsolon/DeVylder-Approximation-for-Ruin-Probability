@@ -1,6 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: APH1.aux
 The style file: amsalpha.bst
 Database file #1: Pare37.bib
-Warning--I didn't find a database entry for "reintelek14"
+Repeated entry---line 1094 of file Pare37.bib
+ : @article{AP14
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1697 of file Pare37.bib
+ : @article{bobbio2005matching
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7638 of file Pare37.bib
+ : @article{de1978practical
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--missing pages in AGLW
-(There were 2 warnings)
+Warning--missing pages in AGV
+Warning--missing pages in brito2008euler
+Warning--missing publisher in dickson2005optimal
+Warning--missing pages in vazquez2019psem
+(There were 3 error messages)

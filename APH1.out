@@ -1,1 +1,12 @@
-\BOOKMARK [1][-]{section.1}{Examples of scale computations for Cram\351r-Lundberg \040models }{}% 1
+\BOOKMARK [1][-]{section.1}{Introduction }{}% 1
+\BOOKMARK [1][-]{section.2}{Which exponential approximation? }{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Some de Vylder-type approximations for the ruin probability \040}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Pad\351 approximations of the scale functions Wq, Zq, q >0 }{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Examples of scale approximations for Cram\350r-Lundberg models }{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{A Cram\351r-Lundberg process with hyperexponential claims of order 3}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{A Cram\351r-Lundberg process with non-hyperexponential claims of order 5}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{A Cram\351r-Lundberg process with a matrix exponential density}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.4}{A Cram\351r-Lundberg process with an Erlang density}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.5}{A Cram\351r-Lundberg process with a matrix exponential density}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Optimizing dividends and capital injectionsGaj,AGLW }{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{The cost function and its optimization }{section.4}% 12

@@ -15,13 +15,13 @@
 \oddsidemargin=-0.65cm\evensidemargin=-0.65cm\headsep=20pt
 
 \newtheorem{thm}{THEOREM}%[section]
-\newtheorem{assumption}[thm]{ASSUMPTION}
+\newtheorem{assumption}{ASSUMPTION}
 \newtheorem{cor}[thm]{COROLLARY}
 \newtheorem{lem}[thm]{Lemma}
-\newtheorem{definition}[thm]{DEFINITION}
-\newtheorem{example}[thm]{EXAMPLE}
+\newtheorem{definition}{DEFINITION}
+\newtheorem{example}{EXAMPLE}
 \newtheorem{proposition}[thm]{PROPOSITION}
-\newtheorem{remark}[thm]{REMARK}
+\newtheorem{remark}{REMARK}
 \def\beXa{\begin{example}} \def\eeXa{\end{example}}
 \def\eeD{\end{definition}} \def\beD{\begin{definition}}
 \def\beR{\begin{remark}} \def\eeR{\end{remark}}
@@ -73,9 +73,9 @@
 \endgroup}
 \def\fn{\symbolfootnote}
 \def\den{denominator }
-\def\I{\infty} \def\Eq{\Leftrightarrow}
+\def\I{\infty} \def\Eq{\Leftrightarrow}\def\vb{\vec \beta}\def\vo{\bff 1}
 \def\und{\underline} \def\unl{\underline} \def\T{\widetilde}
-\def\CL{Cram\'er-Lundberg } \def\WH{Wiener-Hopf } \def\iof{l^{-1}(a)}
+\def\CL{Cram\`er-Lundberg } \def\WH{Wiener-Hopf } \def\iof{l^{-1}(a)}
 \def\SA{Sparre-Andersen } \def\PH{phase-type }  \def\sat{satisfy }
 \def\BEN{\begin{enumerate}}  \def\BI{\begin{itemize}}
 \def\EEN{\end{enumerate}}   \def\EI{\end{itemize}} \def\im{\item} \def\Lra{\Longrightarrow} \def\De{\Delta} \def\eqr{\eqref} \def\mpr{more precisely, } \def\cof{coefficient}
@@ -130,6 +130,7 @@
 \def\cci{complex contour integrals} \def\mcci{the method of complex contour integrals} \def\cgf{cumulants generating function }
   \def\Itf{It follows that } \def\Mcci{The method of complex contour integrals } \def\wh{where } \def\Ea{\E^{[a}} \def\Eb{\E^{b]}}
 \newcommand{\E}{{\rm I \!E}} \def\OU{Ornstein-Uhlenbeck } \def\difs{diffusions} \def\mex{mixed exponential jumps }
+\def\frz{\fr{W_\q(x)}{W_\q(0)}}\def\me{matrix exponential jumps}
 \newcommand{\p}{{\rm I \!P}} \def\sp{spectrally positive } \def\dif{diffusion}
  \newcommand{\md}{\mathrm d}  \def\mI{\mathcal I} \def\divs{dividends }
 \newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
@@ -151,10 +152,11 @@
    \def\cmy{complete monotonicity } \def\Lm{L\'evy measure }\newcommand{\eps}{\varepsilon} \def\wkt{well-known and easy to check that } \def\expoc{exponential claims}
    \def\Mp{More precisely, } \def\sats{satisfies} \def\form{formula } \def\sat{satisfy} \def\fun{function } \def\expl{explicit } \def\funs{functions} \def\thr{therefore } \def\wf{we find that } \def\inc{increasing} \def\resp{respectively} \def\proc{process} \def\eq{equation} \def\eqs{equations} \def\cd{(\cdot)} \def\sat{satisfy} \def\ci{capital injections} \def\C{C} \def\D{D} \def\tRui{| \Rui} \def\uph{\red{UP TO HERE}}
 \def\abs{absolute } \def\part{\partial } \def\tx{T_{x,+}}  \def\te{T_{\e,+}} \def\iLT{inverse Laplace transform  }\def\bep{\begin{pmatrix}} \def\eep{\end{pmatrix}}
-   \def\ito{it turns out that } \def\bcons{boundary conditions} \def\bcon{boundary condition } \def\SL{Sturm Liouville } \def\wrt{with respect to }\def\rmi{\rho_{-}} \def\rpl{\rho_{+}}
+   \def\ito{it turns out that } \def\bcons{boundary conditions} \def\bcon{boundary condition } \def\SL{Sturm Liouville } \def\wrt{with respect to }\def\rmi{\rho_{-}} \def\rpl{\rho_{+}}\def\GSm{Gerber-Shiu measure}
    \def\nny{nonnegativity } \def\wth{with respect to } \def\abr{absolute ruin } \def\PHj{phase-type jumps} \def\tZ{\;{^| Z}} \def\tW{\;{^| W}} \def\tRui{\;{^| \Rui}} \def\inth{in the case of } \def\c{c} \def\ctr{control } \def\eddc{expected discounted dividends minus capital injections}\def\coe{coefficient} \def\per{perturbed } \def\Ito{It turns out that }\def\std{state dependent } \def\Marp{Markov process} \def\saty{satisfy } \def\wft{we find that }\def\LTW{Laguerre-Tricomi-Weeks}\def\TW{W^{(\Fq)}_0} \def\FT{fixed Talbot algorithm }\def\ET{Esscher transform}\def\WF{W^{(\Fq)}}
    \def\ratap{rational approximation}
-   \def\Dis{\mathfrak D} \def\Mar{Markov }\def\fac{factorization} \def\DW{\Delta^{(W)}_\q} \def\DZ{\Delta^{(Z)}_\q} \def\CLp{\CL process  } \def\form{formula} \def\fno{from now on} \def\upc{up to a constant} \def\snl{\sn \lev \procs } \def\expoj{exponential jumps} \def\prc{proportionality constant} \def\Itt{It turns out that }\def\snL{spectrally negative L\'evy processes} \def\wr{with respect to }\def\Tse{This is equivalent to }\def\LZa{Lokka-Zervos alternative}\def\GSf{\GS function}\def\sta{standard }\def\deV{de Vylder approximation}\def\wmh{we must have }\def\Ite{It is enough to analyze }
+   \def\Dis{\mathfrak D} \def\Mar{Markov }\def\fac{factorization} \def\DW{\Delta^{(W)}_\q} \def\DZ{\Delta^{(Z)}_\q} \def\CLp{\CL process  } \def\form{formula} \def\fno{from now on} \def\upc{up to a constant} \def\snl{\sn \lev \procs } \def\expoj{exponential jumps} \def\prc{proportionality constant} \def\Oth{On the other hand, }\def\Itt{It turns out that }\def\snL{spectrally negative L\'evy processes} \def\wr{with respect to }\def\Tse{This is equivalent to }\def\LZa{Lokka-Zervos alternative}\def\GSf{\GS function}\def\sta{standard }\def\deV{de Vylder approximation}\def\wmh{we must have }\def\Ite{It is enough to analyze }\def\aetf{are expressed in terms of the functions }\def\vRui{\vec \Rui}\def\frq{\frac q{\Fq}}
+   \def\aet{are expressed in terms of  }
    \def\Tse{This is equivalent to }\def\elts{elements }\def\capi{capital injections}\def\edd{expected discounted dividends }\def\obj{objective} \def\ti{\times } \def\tc{T_{c,+}} \def\tbm{T_{b,-}}\def\Nt{Note that }
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}%//.//
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert}
@@ -181,38 +183,54 @@
 
 
 \begin{document}
-\title{Optimizing dividends and limited capital injections. A practical solution for the  Cram\'er-Lundberg process, via de Vylder-type   approximations %Which ``de Vylder"   approximation?
+\title{Optimizing dividends and limited capital injections. Practical approximations for the  Cram\'er-Lundberg process
 }
 %\title{Are the  ``de Vylder-type" and Pad\'e  approximations   efficient for optimizing dividends for the \CL process?}
-\author{F. Avram, D. Goreac, R. Adenane, U. Solon, S. Zhu
+\author{F. Avram, D. Goreac, A. Horvath, R. Adenane, U. Solon, S. Zhu
 }
 \maketitle
 \begin{abstract}
-We investigated recently in \cite{AGLW} the  control problem  of  optimizing dividends in a Cramér-Lundberg model  in which capital injections are allowed at a certain cost.
-We proved there the optimality,  with exponential jumps, of bounded buffer  $(-a,0,b)$ policies, which
-consist in allowing capital injections smaller than a given $a^*$ and declaring bankruptcy at the first time when the size of the overshoot below 0 exceeds $a^*,$ and only pay dividends when the reserve reaches an upper barrier $b^*$.
-$a^*,b^*$ are determined via simple formulas expressed in terms os the scale functions
-$W_q,Z_q$.
- Since generalizing to general claims seems  rather daunting, we decided   to   experiment below numerically  with  applying our formulas (incorrectly) to the general case.  While of course, un-optimal, the results show typically improvements of around $33 \%$ \wrt to the previous literature (the \deF and \SLG\ solutions).
-
- This approach is very similar in spirit with the de Vylder-type approximations, which consist essentially in
-replacing the inverse of the exponential rate $\mu^{-1}$ in our formulas  respectively    by $m_1, $  by $\fr {m_2}{2 m_1}$, or by $\fr {m_3}{3 m_2}$ (more complete descriptions may be obtained by working out some first order Pad\'e approximations).  Since we do not have an exact answer for general claims, studying the accuracy of our four  approximations is impossible.  We can however compare the amount of improvement \wrt  the traditional \deF and \SLG\ objectives (which only optimize  the dividend barrier $b$).
-
-
+The recent papers \cite{Gaj,AGLW}
+ investigated  the  control problem  of  optimizing dividends
+ when capital injections and bankruptcy are allowed as well. The first paper works under the  spectrally negative L\'evy model; the second works under the  Cramér-Lundberg model  with \expoj,  where the results are considerably more explicit.  The current paper illustrates the fact that quite reasonable approximations of the first problem may be obtained using the exponential particular case. We start by experimenting here with de Vylder type approximations, which amount essentially to replacing our process by one with \expoj\ and cleverly crafted parameters based on the first three moments of the claims. The winner \how is a new approximation specific to our problem, which consists in plugging into the exponential objective function  \eqr{J0} the exact values of  both  the \sf s and the survival and mean functions of our non-exponential examples.
 \end{abstract}
 \tableofcontents
 
+\input{intDV}
+\input{low1}
+\input{low21}
+\input{MixExp83Wscale}
+%\vfil \eject
 
-%\input{exaClu}
-\input{exa}
+%\newpage
 
-%\input{two}
+\input{NH5mmWscale}
+\input{MatExp6220Wscale}
+\input{AzcueMWscale}
+\input{MatExpCosWscale}
+%\input{exa} \input{315}
+%\input{NH5} %bad graphs
+%\input{NH5bic} %bad graphs
 
+%\input{exaRein}
+%\input{Loe}
+%\input{RTnon}
+
+%\input{mod}
+\input{dan2D}
+%\input{extPH}
+%\input{Eq}
+%\input{exaCInj}
+
+%\input{proprei}
+
+%\input{derDev}
+%\input{nme}
 \small
 \bibliographystyle{amsalpha}
 %\bibliographystyle{plain}
 \bibliography{Pare37}
-
+%\input{MA}
 \end{document}
 
 

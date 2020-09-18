@@ -1,0 +1,68 @@
+\subsection{A \per\ Cram\'{e}r-Lundberg process} \label{e:Loeffen}
+In the following example, we study, following    \cite{Loe08}, a perturbed \CL\ model with Erlang  $Erlang(2,1)$  density of claims $f(x) = 10 \le(x \a^2 e^{-x}\ri)$ for $\a =1$, and  $\l=10,\ \th = \frac{1}{10},\  c = \frac{107}{5},\ q=\frac{1}{10}.$
+
+The scale function when the volatility parameter is $\s =2$ is given by
+\bea
+\begin{aligned}
+& W_q (x) =-0.0431493\ 2.71828^{-11.1486 x}+0.00613626\ 2.71828^{-1.5136 x}-0.232557\ 2.71828^{-0.0765082 x}\\
+& +0.26957\ 2.71828^{0.0387284 x}
+\end{aligned}
+\eea
+
+\begin{figure}[!h]
+\begin{subfigure}[a]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{WLoefa}
+        \caption{Graphs of $W_q$ in the Loeffen example with $\k(s)= \frac{\s^2 s^2}{2}+ s \left(c- \l \le(\frac{1}{(s+1)^2}+\frac{1}{s+1}\ri)\ri) , \s = 2, \ c= \frac{107}{5}$. The classic \deV \ and the Renyi approximation are indistinguishable from the exact.}
+        \label{fig:WLoefa}
+    \end{subfigure}
+\begin{subfigure}[b]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{ShLoe}
+        \caption{Graphs of $W_q'$ in the Loeffen example.}
+        \label{fig:ShLoe}
+    \end{subfigure}
+
+    \begin{subfigure}[c]{0.9\textwidth}
+        \includegraphics[width=\textwidth]{WLoefb}
+        \caption{$W''_q(x)$, $\s = 2$}
+        \label{fig:WLoefb}
+    \end{subfigure}
+    \caption{Graph of $W_q(x),W'_q(x),W''_q(x)$ and its approximations and the approximations in the Loeffen example.}
+\end{figure}
+\BEN
+\im When $\s=2$: $\Phi_q = 0.0387284$; the dominant exponent of the classic \deV \ is very close at $0.0395652$, and the dominant exponent of Renyi, $0.0396427$, is also close.
+The exact optimal barrier is $b^{*}= 10.5345$, the Renyi optimal barrier is $b_R = 10.2346$, and the relative error $0.0284683$.
+ The DeVylder optimal barrier is $b_V= 10.5213$, and the relative error for the classic \deV\ is $0.00124852$.
+
+ \im When $\s= \frac{7}{5}$: $\Phi_q = 0.0391484$; the dominant exponent of the classic \deV \ is very close at $0.0395652$, and the dominant exponent of Renyi, $0.0396427$, is also close.
+The exact optimal barrier is $b^{*}= 10.4389$, the Renyi optimal barrier is $b_R = 10.1742$, and the relative error $0.0253614$.
+ The DeVylder optimal barrier is $b_V= 10.4653$, and the relative error for the classic \deV\ is $0.00252756$.
+ \EEN
+
+
+
+
+
+    \iffalse
+
+
+    {\bf The Pad\'e Tijms \app \ is $b^*=0.876898$}.
+    %
+The input to the \LTW \ inversion is
+     \[ \H G (s)=\frac{216 \left(261 s^2+1155 s+1202\right)}{187 (6 s+5) (6 s+11) (6 s+17)},\]
+the  Pad\'e approximation of order $(0,1)$ is $\frac{312077664}{187 (1278399 s+1123870)}$,  the Laguerre exponent is $\alpha/2=0.879123$, and the largest error with $n=40$ is $4 \times 10^{-14}$ -- see Figure \ref{f:err3}.
+\figu{err3}{Relative errors of the \LTW \ inversion with mixed exponential claims of order $3$}{}
+
+Again, the exponent  $\alpha/2=\fr{ 6 \k'(\Fq) \k''(\Fq)}{3 (\k''(\Fq))^2- \k'(\Fq) \k'''(\Fq)}=1.138$ does better,  with the largest error  with $n=40$ of $6 \times 10^{-16}$.  This suggests the importance of optimizing $\a$, which is a  difficult problem \cite{giunta1989more,weideman1999algorithms}.  Recall however our proposal  to circumvent it by starting with a
+higher order \Pd \ of $G(s)$ -- see \eqref{MG}.
+ Another reasonable choice is the ``true dominant exponent  $\alpha/2=5/6$ which is unknown in real life, and yields a larger error $3 \times  10^{-15}$ (with $n=50$). The exponent of the new  formula \eqref{al} is $\alpha/2=0.77$, and the  error with $n=50$ is $3 \times 10^{-14}$, even larger.
+%\fi
+In  the figure \ref{f:MEp2}, we draw the exact $W_q$, together with its six   approximations.
+\fi
+\iffalse
+
+
+ \figu{}{\label{Erl(2)} Approximations of the scale function pour sinistres Erlang(2,2), $\r=.84$ en gras pointill\'e, avec Tijms tr\`es proche dessous. L'approx. exponentielle en bas est la pire. De Vylder (pointill\'e) et Renyi sont tr\`es proches pour $u>3$, et leur moyenne fait encore mieux pour $u<3$.}
+{0.7}
+\fi
+
+\newpage 

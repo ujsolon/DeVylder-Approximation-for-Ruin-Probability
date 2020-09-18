@@ -1,112 +1,59 @@
-\section{Two-point Pad\'e approximations, with low order examples}  \label{sec:low1}
-
-
-
-One may obtain better results  by incorporating into the \Pd  the following initial values, that can be
-derived easily from the \LT:
-\beq \la{W0} &&W_\q(0)=  \lim_{s \to \I}s \H W_\q(s)=\begin{cases} \frac 1 {\c}, & \text{if $X$ is of bounded variation/\CL }\\
-0, & \text{if $X$ is of unbounded variation }
-\end{cases},\\&&
-W_\q'(0)= \lim_{s \to \I}s\left( \fr{s}{\k(s) -\q}- W_{\q} (0) \right)=   \begin{cases}  \frac {\q + \lm(0,\infty)} {\c^2}, & \text{if $X$ is of bounded variation}\\
-\frac 2 {\sigma^2}, & \text{if } \sigma > 0, \\
-\infty, & \text{if } \sigma = 0 \; \text{and} \; \lm(0,\infty) = \infty
-\end{cases} \la{W0p}.\eeq
-
-Furthermore, when  the jump distribution has a density  $f$, \ith:\fn[6]{This equation is important in establishing the nonnegativity of the optimal dividends barrier.}
-\begin{equation} \label{e:secder}
-\begin{aligned}
- W_{\q}'' (0_+) &=\lim_{s \to \I} s \left( s \left(\fr{s}{\k(s) -\q}- W_{\q} (0)\right) -  W_{\q}' (0_+) \right)\\
-&= \begin{cases}   \frac 1 c \Big( (\frac {\lambda+ \q }  c )^2 - \frac {\lambda}  c f(0) \Big), & \text{if $X$ is of bounded variation}  \\
--c(\frac 2 {\sigma^2})^2, & \text{if } \sigma > 0
-\end{cases}.
-\end{aligned}
+\section{Which exponential   approximation? \la{s:DV}}
+\ssec{Some de Vylder-type approximations for the \rp\ \la{s:DVr} }
+In the simplest case of \expoj\ and $\s=0$, the  formula for the \rp\ is
+\begin{equation} \la{Ruiex}
+\Rui(x) = P_x[ \exists t \geq 0: X_t < 0]= \frac{1}{1+  {\th}} \ exp \left( - \frac{x  {\th} m_1^{-1}}{1+  {\th}} \right),
 \end{equation}
+where $\th=\fr{c -\l m_1}{\l m_1}$ is the \lc.
+This formula may serve  as the {\bf simplest approximation} for \procs\ with general claims, simply by plugging the mean of the claims.
 
 
-Further derivatives at $0$ could be computed, but we  stop at order $2$, since  $W_\q''(0)$ already requires estimating $f_C(0)$, which is a rather delicate task starting from real data.
+{\bf The Renyi and De Vylder's approximations}.
+More sophisticated is the Renyi exponential
+approximation
+\begin{equation*}
+\Rui_R(x) =  \frac{1}{1+  {\th}} \ exp \left( - \frac{x  {\th} m_R^{-1}}{1+  {\th}} \right), m_R=\frac{m_{2}}{2m_{1}};
+\end{equation*}
 
- We will provide in Proposition \ref{deV} below a couple of two-point \Pds, when $n=2$. Before that, it is worth recalling the case of \expoc.
- \beXa
-  {\bf The Cram\'{e}r-Lundberg model with exponential jumps \la{s:exp}}
-Consider  the Cram\'{e}r-Lundberg model
- with exponential jump sizes with mean $1/\mu$, jump
-rate $\lambda$, premium rate $c>0$,
-and Laplace exponent
-$\k(s)=s \le(c-\fr{\lambda}{\mu+s}\ri)$, assuming $\k'(0) = c- \fr{\lambda} {\mu} > 0$. Let $\g=\mu - \l/c$ denote the adjustment coefficient, and let $\r=\frac \l{c \mu}$. Solving $\k(s)-\q=0 \Eq c s^2 + s(c \mu -\l -\q) - \q \mu=0$ for $s$ yields two distinct solutions $\g_{2} \leq 0 \leq \g_{1}=\Fq$ given by
-\begin{align*}
-\g_{1} =& \fr{1}{2c} \left(- \left(\mu c -\lambda - \q\right) + \sqrt{\left(\mu c -\lambda - \q \right)^2 + 4\mu \q c} \right),\\
-\g_{2} =& \fr{1}{2c} \left(- \left(\mu c -\lambda - \q\right) - \sqrt{\left(\mu c -\lambda - \q \right)^2 + 4\mu \q c} \right).
-\end{align*}
-
-
-The $W$ scale function is:
-\be \la{Wexp}  W_{\q}(x) = \fr{A_1 e^{\g_{1}x} - A_2 e^{\g_{2}x}}{c(\g_{1}-\g_{2})}  \Eq \H W_{\q}(s) = \fr{s+ \mu}{c s^2 + s(c \mu -\l -\q) - \q \mu}\ee
-where $A_{1} = \mu + \g_{1}, A_{2} = \mu + \g_{2}$.
-
-Furthermore, it is \wkt    the function $ W_{\q}'(x)=H_D(x)^{-1}$ is in this case
-unimodal  with global minimum at
-\be \la{ob} b^* = \frac{1}{\g_{1} - \g_{2}}
-\begin{cases}\log
-\frac{(\g_{2})^2 A_{2}}{(\g_{1})^2 A_{1}}=\log
-\frac{(\g_{2})^2(\mu +\g_{2})}{(\g_{1})^2(\mu +\g_{1})} \quad &\text{if $ W_{\q}''(0) <  0 \Eq (\q+\lambda)^2$}-
-c\lambda\mu < 0\\ 0 & \text{if $ W_{\q}''(0)\geq 0 \Eq
-(\q+\lambda)^2- c\lambda\mu \geq 0$}\end{cases}, \ee since
-$ W_{\q}''(0) =
-\fr{(\g_{1})^2(\mu +\g_{1})-(\g_{2})^2(\mu +\g_{2})}{c(\g_{1}-\g_{2})}
-\sim (\q+\lambda)^2- c\lambda\mu$ and that the optimal strategy for the \deF \prob \ is
- the barrier strategy at level $b^*$ \cite{APP}.
-
-
-\eeXa
-
-\beP \la{deV}
-\BEN \im To secure both the values of $W_\q(0)$ and $W_\q'(0)$, take into account \eqr{W0} and \eqr{W0p}, i.e. use the \Pd  $$\H W_\q(s) \sim \fr{\sum_{i=0}^{n-1} a_i s^i}{c s^n+ \sum_{i=0}^{n-1} b_i s^i}, a_{n-1}=1, b_{n-1}=c a_{n-2}-\l -\q.$$
-This yields
-\be \la{W2zz} \H W_\q(s) \sim
-   \frac{\frac{1}{m_1}+s}{c s^2+ s \left(\frac{c}{m_1}-\lambda
-   -q\right)-\frac{q}{m_1}}.\ee
-
-
- In view of \eqr{Wexp}, this yields the same result as approximating the claims by \expoc, with $\mu=\frac 1{m_1}$.
-
-   \im To ensure $W_\q(0)=\frac 1 c$, we must only impose the behavior  specified in \eqr{W0}, i.e. use the \Pd  $$\H W_\q(s) \sim \fr{\sum_{i=0}^{n-1} a_i s^i}{c s^n+ \sum_{i=0}^{n-1} b_i s^i}, a_{n-1}=1.$$
-For $n=2$, this yields
-\be \la{W2z} \H W_\q(s) \sim\frac{\frac{2 m_1}{m_2}+s}{c s^2 +\frac{s \left(2 c m_1-2
-   \lambda  m_1^2-m_2 q\right)}{m_2}-\frac{2 m_1
-   q}{m_2}}=\frac{\frac 1 {\T m_1}+s}{c s^2 +{s \left(\frac c {\T m_1}-
-   \lambda \fr{ m_1}{\T m_1}- q\right)}-\frac{
-   q}{\T m_1}},\ee
-   where we denoted by $\T m_1=\frac {m_2}{2 m_1}$ the first moment of the excess density $f_e(x)$.
-    For \expoc \ this coincides with \eqr{W2zz} (since $f_e(x)=f(x)$). This is the DeVylder B)  method
-    \cite[(5.6-5.7)]{gerber2008methods}, derived therein
-    by assuming  \expoc, with $\mu=\frac {2 m_1}{ m_2}$, and simultaneously   modifying  $\l$ to fit the first two moments of the risk process.
+This formula can  be obtained as a \tPd\   of the \LT, which conserves also the value $\Rui(0)=(1+\th)^{-1}$ \cite{AP14}. It may be also viewed heuristically as an exponential
+approximation of the {\bf excess/severity density} $$f_e(x)=\fr{\ovl F(x)}{m_1}=\fr{1- F(x)}{m_1}.$$ Heuristically, it makes more sense to make $f_e(x)$ exponential instead of the original density $f(x)$, since $f_e(x)$ is a monotone function (and also an important component of the \PK formula for the \LT\ $\H \Rui(s)=\int_0^\I e^{- s x} F( dx)$) -- see \cite{ramsay1992practical,AP14}.
 
 
 
- \im When the pure \Pd is applied, the first step yields
-\beq \la{W2} && \H W_\q(s) \sim \frac{ s+\fr{3 m_2}{m_3}}{s^2 \left( c + \lambda  (\frac {3 m_2^2}{2
-   m_3}-m_1)\right)+s \left( c\fr{3 m_2}{m_3}-\fr{3 m_1 m_2}{m_3} \lambda  - q\right)-\fr{3 m_2}{m_3} q}\no\\&&=
-   \frac{ s+\fr{1}{\H m_3}}{s^2 \left( c + \lambda  (\frac {\H m_2}{
-   \H m_3}-1)\right)+s \left( c \fr{1}{\H m_3}-\fr{ m_1 }{\H m_3} \lambda  - q\right)-\fr{1}{\H m_3} q},\eeq
-   where ${\H m_i}=\fr{m_i}{i \; m_{i-1}}$ is a so-called "normalized moment" \cite{BoHoTe05}.
 
-   This is the DeVylder A)  method
-    \cite[(5.2-5.4)]{gerber2008methods}, derived therein
-    by assuming   \expoc, with $\mu=\frac {3 m_2}{ m_3}$, and simultaneously   modifying both  $\l$ and $c$ to fit the first three moments of the risk process.
+More moments may be put to work in the \deV
+\begin{equation}
+\Rui_{DV}(x) = \frac{1}{1+ \T {\th}} \ exp \left( - \frac{x \T {\th} \T m^{-1}}{1+ \T {\th}} \right), \; \T {m}=\frac{m_{3}}{3m_{2}}=\H m_{3}, \;  \T \th =\frac{2 m_{1}m_{3}}{3m_{2}^{2}}\th=\frac{\H m_{3}}{\H m_{2}}\th.
+\end{equation}
+Interestingly, the result may be expressed in terms of the so-called "normalized moments" \be {\H m_i}=\fr{m_i}{i \; m_{i-1}}\ee  introduced in \cite{bobbio2005matching}.
 
-
+The \deV\ parameters above may be obtained either from  \BEN \im a \Pd\ of the \LT\ of the \rp\ \cite{avram2011moments}, or \im by equating the first  cumulants of our process to those of a \proc\ with  exponentially distributed claim sizes of mean $\T m$,  and  modified $\l, c$  \cite{de1978practical};  (however   $p=c -\l m_1$ must be conserved, since this is the first cumulant). This results -- see \eqr{ap3} -- in the modified \paras
+$$\T m =\H m_3, \;  \T {\lambda}
+= \frac{9 m_{2}^{3}}{2 m_{3}^{2}}\lambda=\fr{ m_2/2} { \H m_3^2} \l, \; \;  \T c= c -\l m_1+ \T \l \T m= c -\l m_1+  \l \frac{ m_{2}^{2}}{2 m_{3}}$$
+where we gave also expressions involving the less standard normalized moments $\H m_k$ of \cite{bobbio2005matching}.
 \EEN
-\eeP
-\beL  In the case of \expoc,  the three approximations given above are exact. \eeL
 
-\prf It suffices to check that for \expoc \ all the normalized moments are equal to $m_1=\mu^{-1}$. \qed
+The first derivation via Pad\'e shows that higher order approximations may be easily obtained as well (but they might not be admissible, due to negative values).
 
-In particular,  the optimal barrier for \expoc \ obtained by the explicit formula \eqr{ob} is the same. For example,  $\mu = 2/5, \lambda = 9/10, c = 1, \q = 1/10$ yields $$ W_\q(x) \sim 0.652989 2.71828^{0.0659646 x}-0.152989 2.71828^{-1.51596 x}$$
-   and  $b^* = 3.04576$.
+The second derivation of  De Vylder is a {\bf process approximation} (i.e., independent of the problem considered); as such, it may  be  applied to other functionals of interest  besides \rps ($W_q(x)$, dividend barriers, etc), simply by plugging the modified \para s in the exact formula for the \rp\ of the simpler process.
+
+
+
+
+
 
 \iffalse
-   See figure \ref{Erl(2)} for a comparison of the results obtained by our four approximations with those obtained by "exact" Talbot inversion,  with     {\bf Complete ...  ....}
+\section{Can we minimize the \rp, by proportional \rei? \la{s:DVr} }
 
- \figu{}{\label{Erl(2)} Approximations of the scale function pour sinistres Erlang(2,2), $\r=.84$ en gras pointill\'e, avec Tijms tr\`es proche dessous. L'approx. exponentielle en bas est la pire. De Vylder (pointill\'e) et Renyi sont tr\`es proches pour $u>3$, et leur moyenne fait encore mieux pour $u<3$.}
-{0.7}
+Let us consider first the mean premium principle, with $\th_R \geq \th$ and retention level (potentially dependent on $x$). As \wk, we may forget about the reinsurer, and say instead that we modify the premium to
+and the \lc\ to
+\be \la{Tc} \T c=\l m_1 \pr{1+ \th - (1-a) \pr{ \th_R +1}}=\l m_1 \pr{1+ \T \th},\ee
+\be \la{pos} \T \th=\th - (1-a) \pr{ \th_R +1},\ee
+with $a \geq \fr {1 +\th_R-\th}{1+ \th_R } $, to ensure positivity in \eqr{pos}.
+ \Fr we must also multiply the mean by $a$. %the level of the naive approximation
+
+ The \rp\ has one critical point with $a$ satisfying  a quadratic equation (but, taking $a$ at the critical point  yields negative $\T \th$). A careful analysis reveals that the optimum is at $a=1$?.
+
+ This continues to be the case for the mean-variance premium principle (Shihao?).
+ The optimization becomes non-trivial for excess of loss \rei?.
 \fi

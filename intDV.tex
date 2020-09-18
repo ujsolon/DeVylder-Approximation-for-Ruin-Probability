@@ -1,0 +1,118 @@
+\section{Introduction %Pad\'e and two-point Pad\'e approximations, with low order examples
+\label{s:low}}
+
+{\bf Motivation.} The recent papers \cite{Gaj,AGLW}
+ investigated  the important control problem  of  optimizing dividends
+ and  capital injections for \procs\ with jumps, when bankruptcy is allowed as well. The first paper works under the  spectrally negative L\'evy model; the second works under the  Cramér-Lundberg model  with \expoj.  The results are considerably more explicit in the latter case, and our paper shows that   they provide quite reasonable  approximations to the  case of \me\ and general jumps (as the \deV\ provides for the ruin problem).  We focus here on the case of \me\ jumps despite the fact that non \me\ jumps yield similar numeric results, for two reasons. One is in order to highlight  several equations which are similar to their exponential  versions,  and
+ which may  at their turn be used to produce more accurate approximations, and also since this class is known to be dense in the class of general \nne jumps (even error bounds are available for \cm\ jumps \cite{vatamidou2014accuracy}).
+ % which are both general and practical for computations.
+
+ The results of \cite{Gaj,AGLW} may be divided in four parts:
+ \BEN \im Compute the value of "bounded buffer policies", which
+consist in allowing capital injections smaller than a given $a$ and declaring bankruptcy at the first time when the size of the overshoot below 0 exceeds $a,$ and  pay dividends when the reserve reaches an upper barrier $b$. These will briefly be described as $(-a,0,b)$ policies \fno.
+
+The first  step is  carried out for the \snL model  only in \cite{Gaj}; in \cite{AGLW} it is only carried out for exponential claims.  However, as usual, this can be easily extended to the matrix exponential case, and this extension is spelled out below.
+\im Equations determining candidates for the optimal
+$a^*,b^*$ are  obtained
+ by differentiating  the objective (which is expressed in terms of the scale functions
+$W_q,Z_q$).
+ \im The   optimal pair
+    $(a^*,b^*)$ is determined  using second order derivatives.
+    \im an  HJB equation associated to the stochastic control problem is formulated and optimality of the $(-a^*,0,b^*)$ policy is established.
+ \EEN
+
+Note that the last three steps are   quite non-trivial and are achieved by different methods in \cite{Gaj} and \cite{AGLW}).
+
+The object of this paper is to investigate experimentally
+the accuracy of exponential approximations in the case of general claims.
+
+
+ \beR  The objective may be optimized numerically, for each instance of the parameters,  using the first step only. To facilitate this,  we offer below in \eqr{J0PH} a simplification of \cite{Gaj}'s formula, valid for  Cramér-Lundberg models  with \me. Interestingly, this formula may be derived via steps analogous to the exponential case, after introducing a vector $Z_q$ \sf.
+
+ Beyond \me, one could resort to approximation by \procs\ with \me\ -- see \fe \cite{AA}.
+
+
+To make life even easier, one can  approximate by  \procs\ with exponential claims, and resort directly  to  formulas  in \cite{AGLW}.  The results below  show that the  (un-optimal)  $(\T a, \T b)$ obtained this way lead to small relative errors with respect to the (exact) numeric optimization of  the objective.
+
+  \Ito  the value functions of exponential approximations show  \red{considerable} improvements  \wrt  the previous exact results for the \deF and \SLG\ solutions.
+
+  Our  conclusion is that from a practical point of view, exponential approximations are typically sufficient in  this problem.
+
+\eeR
+
+ Our exponential approximation is very similar in spirit with the de Vylder-type approximations, which consist essentially in
+replacing the inverse $\mu^{-1}$ of an exponential rate $\mu$ in the problem considered  respectively    by $m_1, $  by $\fr {m_2}{2 m_1}$, or by $\fr {m_3}{3 m_2}$ (a more complete description of these formulas and proofs are included in section \ref{derdev}).
+
+
+
+{\bf The model}. \cite{AGLW} work under the %\per\
+Cramér-Lundberg model
+\begin{equation}
+\label{CLp}
+X_t=x+c t-\sum_{i=1}^{N_t}C_i \; % + \s B_t,
+c \geq 0, %\s >0,
+\end{equation}
+where $\pr{C_i}_{i\geq 1}$ is a family of i.i.d.r.v.  whose distribution, density and   moments are denoted \resp\ by $F,f,m_k, k \leq K \geq 1$,   and  $N$ is an independent Poisson process  of intensity $\lambda>0$. % and $B_t$ is an independent \sta \BM.
+The space is then endowed with the natural right-continuous, completed filtration
+ $\mathbb{F}$  satisfying the usual assumptions of right-continuity and completeness.
+
+For further details on the formulation of the \div s and \ci\ problem see Section \ref{s:mod}.
+
+Computing the \valf\  was considerably simplified  by the use of the \fp  recipes   available for spectrally negative L\'evy processes \cite{Kyp,KKR,AGV},  which are built around   two ingredients: the  $W_q $ and $Z_q$ scale functions, defined respectively  for $x \geq 0, q \geq 0$ as:\BEN \im the inverse Laplace transform  of $\fr 1{\k(s)-q}$, where $\k(s)$ is the Laplace exponent (which characterizes a \lev \proc) and \im
+$Z_q(x)=1+q\int_0^xW_q(y)dy$\EEN
+ -- see the papers \cite{Suprun,Ber,AKP} for the first appearance of these functions.
+
+A further important role in the results below will be played by the {\bf convolution function}
+\be C_\q(x)=\l \int_0^{x} W_q(x-y)\ovl F( dy)=c {W_q(x)}  -Z_q(x) %+ \si W_q'(x),
+\la{C}\ee
+where the equality holds for an  arbitrary \sur \fun of claims $\ovl F$ by the harmonicity of $Z_q$, and by the $\Z1$ function, defined by
+$\Z1(x)=\int_0^x Z_q(y)dy-(c- \l m_1) \int_0^x W_q(y)dy$, which intervenes in \ci\ problems.
+
+
+
+We   highlight now in  figure \ref{f:ZZ} the fact  that for \expoj, the limited capital injections objective function $J_0$  given by \eqr{Estima*} for arbitrary $b$ but optimal $a=s(b)$ (via a complicated formula)  improves
+the value function \wrt \deF and \SLG, for any $b$.
+
+\figu{ZZ}{The value function $J_0$  given by \eqr{Estima*}, for arbitrary $b$ but optimal $a$. The inequality observed is a  consequence of the properties of the Lambert function. The improvement \wrt \deF is considerable, of $0.382292 \%$ (the SLG approach is not competitive in this case).  Note also that the optimal barrier $b=0.109023$ is smaller than the \deF and SLG optima of $0.626672, 1.82726$.}{.7}
+
+
+
+
+
+  As the formulas in \cite{AGLW} are entirely expressed in terms of the \sf s, we may apply them directly to non-exponential cases, as  ad-hoc  approximations; this  is clearly in the spirit, if not in the letter  of the de Vylder approximation.
+
+
+
+
+Recall that the philosophy of the \deV\  is to approximate a \CLp by a simpler \proc\ with \expoj. The efficiency of the de Vylder \app\ for approximating \rps\ is well documented \cite{de1978practical}. The natural question of whether this type of techniques may work for other objectives, like \fe\ for optimizing dividends and/or \rei\ was already discussed  in \cite{hojgaard2002optimal,dickson2005optimal,beveridge2007optimal,GSS,AHPS}. In this paper, following on previous works \cite{avram2011moments,AP14,ABH}, we draw first the attention to the fact that  we have not one, but many types of de Vylder-type approximations, and we compare some of them numerically on simple applications like determining the optimal \divs\ barrier, which requires approximating the \sf\ $W_q(x)$. The best \app\ in our experiments turn out to be the classic \deV, as well
+as that obtained by a Pad\'e approximation of the \LT\ $\H W_q(s)$, while fixing the value $W_q(0)=\fr 1 c$, which we will call Renyi approximation. These two approximation yield quite reasonable answers for completely monotone claims. In the opposite case however-- see \fe Figures \ref{f:pl3}, \ref{f:pl3}, our completely monotone approximation cannot fully reproduce functions like $W_q'(x), W_q''(x)$, when they exhibits oscillations.  In such cases,
+ higher order generalizations should be used, and an investigation of these   will be the object of a future paper.
+
+{\bf Contents and contributions}.
+Section \ref{s:DV} reviews, for completeness, to the \deV-type \app s.  Section \ref{s:DVr} recalls, for warm-up, some of the oldest exponential approximations for \rps. Section \ref{s:DVW} recalls in Proposition \ref{p:deV}, following \cite{AP14,AHPS}  three approximations of the \sf\ $W_q(x)$\fn[4]{essentially, this is the  ``dividend function with fixed barrier", which had been also extensively studied in previous literature before the introduction of $W_q(x)$}, obtained by approximating its \LT.
+Section \ref{ex:1} examines  numerically the performance of \deV-type \app s on some chosen characteristics ($\Fq,$ and the optimal \deF barrier), on some cases with matrix-exponential claims.  Our observation here is that the classic \deV\ typically wins, just like in the ruin problem, but there are also exceptions  where Renyi wins.
+
+
+Note that the previous two sections do not involve \ci; they were included to offer the reader a glimpse into  the historical roots  of the
+exponential approximation idea.
+
+Section \ref{s:AG}  revisits the Equity Cost Induced Dichotomy of \cite{AGLW}, while taking also advantage of properties of the Lambert-W function, which were not exploited in that paper. The final result is summarized in Section \ref{s:eqc}, but we offer more details (which may be skipped) in Section \ref{s:cost}. Section \ref{s:cost} is useful however for understanding  Section \ref{s:me}, where we  provide a new (straightforward) extension   to the \me\ case. %, which is our main methodological contribution in this paper.
+
+Section \ref{ex:2} examines  numerically, on   the same matrix exponential examples considered in section \ref{ex:1},   the performance of our exponential approximations with respect to the exact optimum, and also the improvement  \wrt the value of the \deF and SLG approaches.  Using matrix-exponential claims is practical both since here we know the exact solution, and since the
+InverseLaplaceTransform command in symbolic algebra systems provides
+the \sf s as functions on $\R_+$.
+
+
+
+Section \ref{s:Ma} gives some idea of the programs we used, which are available upon request
+
+Finally, section \ref{dev} recalls the derivation of some  de Vylder-type approximations, including the  original derivation of the Renyi and de Vylder approximations using  process cumulants, in section \ref{derdev}.
+
+To prevent this paper form becoming too long, we decided to postpone for the future the investigation of the performance of the approximation \eqr{J0} on  some non-matrix exponential favorites of the  statistical modeling like   gamma (including $\chi^2$), Pareto, Weibull, Mittag-Leffler, and beta.
+In that case, our approximation must be tested against the exact formula of \cite{Gaj}.
+
+
+% section \ref{s:two} recalls reviews some aspects of the  asymptotic behavior of the \sf, which are crucial in evaluating numerically the \perf\of our approximations.
+
+
+

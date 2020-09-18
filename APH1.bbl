@@ -1,3 +1,4 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
 \providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
 % \MRhref is called by the amsart/book/proc definition of \MR.
@@ -5,20 +6,138 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{AGLW20}
+\begin{thebibliography}{VLSHGG{\etalchar{+}}19}
+
+\bibitem[AA10]{AA}
+Hansj{\"o}rg Albrecher and S{\"o}ren Asmussen, \emph{Ruin probabilities},
+  vol.~14, World Scientific, 2010.
+
+\bibitem[ABH18]{ABH}
+Florin Avram, Abhijit~Datta Banik, and Andr{\'a}s Horv{\'a}th, \emph{Ruin
+  probabilities by {P}ad{\'e}’s method: simple moments based mixed
+  exponential approximations ({Renyi, De Vylder, Cram{\'e}r--Lundberg}), and
+  high precision approximations with both light and heavy tails}, European
+  Actuarial Journal (2018), 1--27.
+
+\bibitem[ACFH11]{avram2011moments}
+Florin Avram, Donatien Chedom-Fotso, and Andr{\'a}s Horv{\'a}th, \emph{On
+  moments based {P}ad{\'e} approximations of ruin probabilities}, Journal of
+  Computational and Applied mathematics \textbf{235} (2011), no.~10,
+  3215--3228.
 
 \bibitem[AGLW20]{AGLW}
 F.~Avram, D.~Goreac, J~Li, and X~Wu, \emph{Equity cost induced dichotomy for
   optimal dividends in the cramér-lundberg model}, IME (2020).
 
-\bibitem[HWR92]{harris1992note}
-C.M. Harris, G.M. William, and F.B. Robert, \emph{A note on generalized
-  hyperexponential distributions}, Stochastic Models \textbf{8} (1992), no.~1,
-  179--191.
+\bibitem[AGVA19]{AGV}
+F.~Avram, D.~Grahovac, and C.~Vardar-Acar, \emph{{The $W,Z$ scale functions kit
+  for first passage problems of spectrally negative L\'evy processes, and
+  applications to the optimization of dividends}}, arXiv preprint (2019).
 
-\bibitem[JT89]{johnson1989matching}
-M.A. Johnson and M.R. Taaffe, \emph{Matching moments to phase distributions:
-  Mixtures of erlang distributions of common order}, Stochastic Models
-  \textbf{5} (1989), no.~4, 711--743.
+\bibitem[AHPS19]{AHPS}
+Florin Avram, Andras Horv{\'a}th, Serge Provost, and Ulyses Solon, \emph{On the
+  pad{\'e} and laguerre--tricomi--weeks moments based approximations of the
+  scale function w and of the optimal dividends barrier for spectrally negative
+  l{\'e}vy risk processes}, Risks \textbf{7} (2019), no.~4, 121.
+
+\bibitem[AKP04]{AKP}
+Florin Avram, Andreas Kyprianou, and Martijn Pistorius, \emph{Exit problems for
+  spectrally negative {L}{\'e}vy processes and applications to ({C}anadized)
+  {R}ussian options}, The Annals of Applied Probability \textbf{14} (2004),
+  no.~1, 215--238.
+
+\bibitem[AP14]{AP14}
+Florin Avram and Martijn Pistorius, \emph{On matrix exponential approximations
+  of ruin probabilities for the classic and brownian perturbed
+  cram{\'e}r-lundberg processes}, Insurance: Mathematics and Economics
+  \textbf{59} (2014), 57--64.
+
+\bibitem[APP07]{APP}
+Florin Avram, Zbigniew Palmowski, and Martijn~R Pistorius, \emph{On the optimal
+  dividend problem for a spectrally negative {L}{\'e}vy process}, The Annals of
+  Applied Probability (2007), 156--180.
+
+\bibitem[BDW07]{beveridge2007optimal}
+Christopher~J Beveridge, David~CM Dickson, and Xueyuan Wu, \emph{Optimal
+  dividends under reinsurance}, Centre for Actuarial Studies, Department of
+  Economics, University of~…, 2007.
+
+\bibitem[Ber98]{Ber}
+Jean Bertoin, \emph{{L}{\'e}vy processes}, vol. 121, Cambridge university
+  press, 1998.
+
+\bibitem[BFS08]{brito2008euler}
+PB~Brito, F~Fabiao, and A~Staubyn, \emph{Euler, lambert, and the lambert
+  w-function today.}, Mathematical Scientist \textbf{33} (2008), no.~2.
+
+\bibitem[BHT05]{bobbio2005matching}
+Andrea Bobbio, Andr{\'a}s Horv{\'a}th, and Mikl{\'o}s Telek, \emph{Matching
+  three moments with minimal acyclic phase type distributions}, Stochastic
+  models \textbf{21} (2005), no.~2-3, 303--326.
+
+\bibitem[Boy98]{boyd1998global}
+JP~Boyd, \emph{Global approximations to the principal real-valued branch of the
+  lambert w-function}, Applied mathematics letters \textbf{11} (1998), no.~6,
+  27--31.
+
+\bibitem[CGH{\etalchar{+}}96]{corless1996lambertw}
+Robert~M Corless, Gaston~H Gonnet, David~EG Hare, David~J Jeffrey, and Donald~E
+  Knuth, \emph{On the lambertw function}, Advances in Computational mathematics
+  \textbf{5} (1996), no.~1, 329--359.
+
+\bibitem[DD05]{dickson2005optimal}
+David Dickson and Steve Drekic, \emph{Optimal dividends under a ruin
+  probabilityconstraint}, 2005.
+
+\bibitem[DV78]{de1978practical}
+Fl~De~Vylder, \emph{A practical solution to the problem of ultimate ruin
+  probability}, Scandinavian Actuarial Journal \textbf{1978} (1978), no.~2,
+  114--119.
+
+\bibitem[GK17]{Gaj}
+Les{l}aw Gajek and {L}ukasz Kuci{\'n}ski, \emph{Complete discounted cash flow
+  valuation}, Insurance: Mathematics and Economics \textbf{73} (2017), 1--19.
+
+\bibitem[GSS08]{GSS}
+Hans~U Gerber, Elias~SW Shiu, and Nathaniel Smith, \emph{Methods for estimating
+  the optimal dividend barrier and the probability of ruin}, Insurance:
+  Mathematics and Economics \textbf{42} (2008), no.~1, 243--254.
+
+\bibitem[H{\o}j02]{hojgaard2002optimal}
+Bjarne H{\o}jgaard, \emph{Optimal dynamic premium control in non-life
+  insurance. maximizing dividend pay-outs}, Scandinavian Actuarial Journal
+  \textbf{2002} (2002), no.~4, 225--245.
+
+\bibitem[KKR13]{KKR}
+Alexey Kuznetsov, Andreas~E Kyprianou, and Victor Rivero, \emph{The theory of
+  scale functions for spectrally negative {L}{\'e}vy processes}, {L}{\'e}vy
+  Matters II, Springer, 2013, pp.~97--186.
+
+\bibitem[Kyp14]{Kyp}
+Andreas Kyprianou, \emph{Fluctuations of {L}{\'e}vy processes with
+  applications: Introductory lectures}, Springer Science \& Business Media,
+  2014.
+
+\bibitem[Ram92]{ramsay1992practical}
+Colin~M Ramsay, \emph{A practical algorithm for approximating the probability
+  of ruin}, Transactions of the Society of Actuaries \textbf{44} (1992),
+  443--461.
+
+\bibitem[Sup76]{Suprun}
+VN~Suprun, \emph{Problem of destruction and resolvent of a terminating process
+  with independent increments}, Ukrainian Mathematical Journal \textbf{28}
+  (1976), no.~1, 39--51.
+
+\bibitem[VAVZ14]{vatamidou2014accuracy}
+Eleni Vatamidou, Ivo Jean Baptiste~Fran{\text{\c{c}}}ois Adan, Maria Vlasiou,
+  and Bert Zwart, \emph{On the accuracy of phase-type approximations of
+  heavy-tailed risk models}, Scandinavian Actuarial Journal \textbf{2014}
+  (2014), no.~6, 510--534.
+
+\bibitem[VLSHGG{\etalchar{+}}19]{vazquez2019psem}
+H~Vazquez-Leal, MA~Sandoval-Hernandez, JL~Garcia-Gervacio, AL~Herrera-May, and
+  UA~Filobello-Nino, \emph{Psem approximations for both branches of lambert
+  function with applications}, Discrete Dynamics in Nature and Society
+  \textbf{2019} (2019).
 
 \end{thebibliography}
